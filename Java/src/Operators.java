@@ -12,6 +12,7 @@ public class Operators {
         // System.out.println(a % b);  // 1
 
 
+
         // 2. Unary Operators
         // int a = 5;
         // System.out.println(++a);  // 6  (pre increment)
@@ -20,8 +21,39 @@ public class Operators {
         // System.out.println(a++);   // 5   (post increment)
         // System.out.println(a);     // 6
 
-        int a = 5;
-        int b = a++ + ++a;        // 5(a becomes 6) + 7 = 12
-        System.out.println(b);
+        // int a = 5;
+        // int b = a++ + ++a;        // 5(a becomes 6) + 7 = 12
+        // System.out.println(b);
+
+
+        // 3. Relational Operators
+        // int a = 10;
+        // int b = 20;
+
+        // System.out.println(a > b);   // false
+        // System.out.println(a == b);  // false
+
+
+
+        // 4. Logical Operators
+        // System.out.println(true && false);   // false
+        // System.out.println(true || false);   // true
+        // System.out.println(!true);           // false
+
+        //short circuit  --> If first condition is false, second condition will NOT execute.
+        // int a = 10;
+        // if (a > 5 && a++ < 20){
+        //     System.out.println("Hello");
+        // }
+        // System.out.println(a);
+
+
+
+        // 5. Assignment Operators
+        int a = 10;
+        a += 5;
+        System.out.println(a);
+
+
     }
 }
