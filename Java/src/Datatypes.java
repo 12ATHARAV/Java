@@ -15,5 +15,17 @@ public class Datatypes {
 
         char grade = 'A';
         System.out.println(grade);
+
+        char ch = 65;            //Because 65 is Unicode for 'A'.
+        System.out.println(ch); 
+
+        boolean isPass = true;
+        System.out.println(isPass);
+
+        byte smallNumber = 100;
+        System.out.println(smallNumber);
+
+        short num = 30000;
+        System.out.println(num);
     }
 }
