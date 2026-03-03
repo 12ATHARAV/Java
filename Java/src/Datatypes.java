@@ -27,5 +27,16 @@ public class Datatypes {
 
         short num = 30000;
         System.out.println(num);
+
+        // type casting
+        // 1. implicit casting (widening)
+        int a = 10;
+        double b = a;
+        System.out.println(b);
+
+        // 2. explicit casting (narrowing)
+        double x = 10.99;
+        int y = (int) x;
+        System.out.println(y);
     }
 }
