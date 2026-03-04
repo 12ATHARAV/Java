@@ -15,16 +15,53 @@ public class Method_Overloading {
     // }
 
 
-    // E2
-    static void greet(){
-        System.out.println("Hello");
+    // E2 //
+    // static void greet(){
+    //     System.out.println("Hello");
+    // }
+    // static void greet(String name){
+    //     System.out.println("Hello, " + name);
+    // }
+    // public static void main(String[] args){
+    //     greet();
+    //     greet("Atharav");
+    // }
+
+
+    // E3 // Compile Time Polymorphism -> Java decides which method to call at compile time.
+    // static void show(int a){
+    //     System.out.println("int");
+    // }
+    // static void show(double a){
+    //     System.out.println("double");
+    // }
+    // public static void main(String[] args){
+    //     show(5);
+    //     show(5.5);
+    // }
+
+
+    // E4 //  Compile Time Polymorphism -> Java decides which method to call at compile time.
+    // static void show(int a) {
+    //     System.out.println("int");
+    // }
+    // static void show(long a) {
+    //     System.out.println("long");
+    // }
+    // public static void main(String[] args){
+    //     show(5);
+    // }
+
+
+    // E6 //  Decimal numbers → double by default
+    static void show(float a) {
+        System.out.println("float");
     }
-    static void greet(String name){
-        System.out.println("Hello, " + name);
+    static void show(double a) {
+        System.out.println("double");
     }
     public static void main(String[] args){
-        greet();
-        greet("Atharav");
+        show(5.5);
     }
 
 }
