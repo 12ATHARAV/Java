@@ -50,10 +50,45 @@ public class Operators {
 
 
         // 5. Assignment Operators
-        int a = 10;
-        a += 5;
-        System.out.println(a);
+        // int a = 10;
+        // a += 5;
+        // System.out.println(a);
 
+
+
+        // 6. Bitwise Operators
+        // int a = 5;   // 0101
+        // int b = 3;   // 0011
+
+        // System.out.println(a & b);  // 1
+        // System.out.println(a | b);  // 7
+        // System.out.println(a ^ b);  // 6
+
+
+
+        // 7. Shift Operators
+        // int a = 5;  // 000101
+        // System.out.println(a << 1);  //10
+
+        // int b = 5;  // 000101  // signed right shift
+        // System.out.println(b >> 1);   // 2  
+
+        // unsigned right shift (>>>)
+        // For positive numbers, >> and >>> produce the same result
+        // For negative numbers, the >>> operator replaces the sign bit (which is 1 in two's complement for negative numbers) with 0, thus converting the negative number into a large positive integer
+
+
+
+        // 8. Ternary Operator
+        // int a = 10;
+        // String result = (a > 5) ? "Yes" : "No";
+        // System.out.println(result);  // Yes
+
+
+
+        // 9. instanceof Operator
+        String name = "Atharav";
+        System.out.println(name instanceof String);  //true
 
     }
 }
