@@ -58,8 +58,27 @@ public class Array {
 
 
     // Common Error: Array Index Out Of Bounds
-    int[] arr = new int[3];
-    arr[3] = 10;   // ArrayIndexOutOfBoundsException
+    // int[] arr = new int[3];
+    // arr[3] = 10;   // ArrayIndexOutOfBoundsException
+
+
+    // Default Values of Arrays
+    // int[] arr = new int[3];
+    
+    // for(int i=0; i<arr.length; i++){
+    //     System.out.println(arr[i]);
+    // }
+
+
+    // Q1 : Sum of Array //
+    int[] arr = {10,20,30,40};
+
+    int sum = 0;
+    for(int i=0; i < arr.length; i++){
+        sum = sum + arr[i];
+    }
+
+    System.out.println(sum);
 
     }
 }
