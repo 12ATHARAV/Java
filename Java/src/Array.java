@@ -71,14 +71,27 @@ public class Array {
 
 
     // Q1 : Sum of Array //
-    int[] arr = {10,20,30,40};
+    // int[] arr = {10,20,30,40};
+
+    // int sum = 0;
+    // for(int i=0; i < arr.length; i++){
+    //     sum = sum + arr[i];
+    // }
+
+    // System.out.println(sum);
+
+
+    // Q2 //
+    int[] arr = {2,4,6,8};
 
     int sum = 0;
-    for(int i=0; i < arr.length; i++){
-        sum = sum + arr[i];
+
+    for(int i = 0; i < arr.length; i++){
+        sum += arr[i];
     }
 
     System.out.println(sum);
+
 
     }
 }
