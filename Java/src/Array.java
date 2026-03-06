@@ -141,10 +141,20 @@ public class Array{
 
         int[][] arr = new int[2][2];
 
+        //taking user input
         for(int i=0; i<arr.length; i++){
             for(int j=0; j<arr[i].length; j++){
+                System.out.print("Enter value for [" + i + "][" + j + "]: ");
                 arr[i][j] = sc.nextInt();
             }
+        }
+        
+        //printing the array
+        for(int i=0; i < arr.length; i++){  //rows
+            for(int j=0; j < arr[i].length; j++){   //columns
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println();
         }
     }
 }
