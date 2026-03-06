@@ -99,62 +99,103 @@ import java.util.Scanner;
 
 
 ////////////////  2D Arrays  ////////////////
+
+// import java.util.Arrays;
+// public class Array{
+//     public static void main(String[] args){
+//         //syntax
+//         // datatype[][] arrayName;
+
+
+//         // Creating a 2D Array
+//         // int[][] matrix = new int[3][3];
+
+
+//         // Assigning Values
+//         // matrix[0][0] = 1;
+//         // matrix[0][1] = 2;
+//         // matrix[0][2] = 3;
+
+//         // matrix[1][0] = 4;
+//         // matrix[1][1] = 5;
+//         // matrix[1][2] = 6;
+
+
+//         // Shortcut Initialization
+//         // int[][] matrix = {
+//         //     {1,2,3},
+//         //     {4,5,6},
+//         //     {7,8,9}
+//         // };
+
+
+//         // Traversing 2D Array
+//         // for(int i=0; i < matrix.length; i++){  //rows
+//         //     for(int j=0; j < matrix[i].length; j++){   //columns
+//         //         System.out.print(matrix[i][j] + " ");
+//         //     }
+//         //     System.out.println();
+//         // }
+
+
+//         // Taking Input for 2D Array
+//         Scanner sc = new Scanner(System.in);
+
+//         int[][] arr = new int[2][2];
+
+//         //taking user input
+//         for(int i=0; i<arr.length; i++){
+//             for(int j=0; j<arr[i].length; j++){
+//                 System.out.print("Enter value for [" + i + "][" + j + "]: ");
+//                 arr[i][j] = sc.nextInt();
+//             }
+//         }
+        
+//         //printing the array
+//         for(int i=0; i < arr.length; i++){  //rows
+//             for(int j=0; j < arr[i].length; j++){   //columns
+//                 System.out.print(arr[i][j] + " ");
+//             }
+//             System.out.println();
+//         }
+
+//         // printing the array using util.Arrays
+//         System.out.println(Arrays.deepToString(arr));
+//     }
+// }
+
+
+///////////////  Linear Search Code  /////////////////
+
+// public class Array{
+//     public static void main(String[] args){
+//         int[] arr = {10, 25, 7, 40, 15};
+//         int target = 7;
+
+//         for(int i = 0; i < arr.length; i++){
+//             if(arr[i] == target){
+//                 System.out.println("Found at index " + i);
+//                 return;
+//             }
+//         }
+//         System.out.println("Not Found");
+//     }
+// }
+
+
+////////////   Find Maximum in Array   //////////////
+
 public class Array{
     public static void main(String[] args){
-        //syntax
-        // datatype[][] arrayName;
+        int[] arr = {4,9,2,15,7};
 
+        int max = arr[0];
 
-        // Creating a 2D Array
-        // int[][] matrix = new int[3][3];
-
-
-        // Assigning Values
-        // matrix[0][0] = 1;
-        // matrix[0][1] = 2;
-        // matrix[0][2] = 3;
-
-        // matrix[1][0] = 4;
-        // matrix[1][1] = 5;
-        // matrix[1][2] = 6;
-
-
-        // Shortcut Initialization
-        // int[][] matrix = {
-        //     {1,2,3},
-        //     {4,5,6},
-        //     {7,8,9}
-        // };
-
-
-        // Traversing 2D Array
-        // for(int i=0; i < matrix.length; i++){  //rows
-        //     for(int j=0; j < matrix[i].length; j++){   //columns
-        //         System.out.print(matrix[i][j] + " ");
-        //     }
-        //     System.out.println();
-        // }
-
-
-        // Taking Input for 2D Array
-        Scanner sc = new Scanner(System.in);
-
-        int[][] arr = new int[2][2];
-
-        //taking user input
-        for(int i=0; i<arr.length; i++){
-            for(int j=0; j<arr[i].length; j++){
-                System.out.print("Enter value for [" + i + "][" + j + "]: ");
-                arr[i][j] = sc.nextInt();
+        for(int i = 1; i < arr.length; i++){
+            if(arr[i] > max){
+                max = arr[i];
             }
         }
-        
-        //printing the array
-        for(int i=0; i < arr.length; i++){  //rows
-            for(int j=0; j < arr[i].length; j++){   //columns
-                System.out.print(arr[i][j] + " ");
-            }
-            System.out.println();
-        }
+        System.out.println(max);
     }
 }
