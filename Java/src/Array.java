@@ -185,17 +185,82 @@ import java.util.Scanner;
 
 ////////////   Find Maximum in Array   //////////////
 
+// public class Array{
+//     public static void main(String[] args){
+//         int[] arr = {4,9,2,15,7};
+
+//         int max = arr[0];
+
+//         for(int i = 1; i < arr.length; i++){
+//             if(arr[i] > max){
+//                 max = arr[i];
+//             }
+//         }
+//         System.out.println(max);
+//     }
+// }
+
+
+//////////// Reverse an Array /////////////
+
+// public class Array{
+//     public static void main(String[] args){
+//         int[] arr = {1,2,3,4,5};
+
+//         for(int i = arr.length - 1; i >= 0; i--){
+//             System.out.print(arr[i] + " ");
+//         }
+//     }
+// }
+
+
+/////////////  Reverse Using Swap (Important)  //////////////
+
+// public class Array{
+//     public static void main(String[] args){
+//         int[] arr = {1,2,3,4,5};
+
+//         int start = 0;
+//         int end = arr.length - 1;
+
+//         while(start < end){
+//             int temp = arr[start];
+//             arr[start] = arr[end];
+//             arr[end] = temp;
+
+//             start++;
+//             end--;
+//         }
+//         System.out.println(java.util.Arrays.toString(arr));
+//     }
+// } 
+
+
+///////////////  Binary Search  ////////////////
+
 public class Array{
     public static void main(String[] args){
-        int[] arr = {4,9,2,15,7};
+        int[] arr = {2,4,6,8,10,12};
 
-        int max = arr[0];
+        int target = 6;
 
-        for(int i = 1; i < arr.length; i++){
-            if(arr[i] > max){
-                max = arr[i];
+        int left = 0;
+        int right = arr.length - 1;
+
+        while(left <= right){
+
+            int mid = (left + right) / 2;
+            
+            if(arr[mid] == target){
+                System.out.println("Found at index " + mid);
+                break;
+            }
+            else if(arr[mid] < target){
+                left = mid + 1;
+            }
+            else{
+                right = mid - 1;
             }
         }
-        System.out.println(max);
     }
 }
