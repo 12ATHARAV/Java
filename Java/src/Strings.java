@@ -81,8 +81,78 @@ public class Strings {
 
 
         // Q //
-        String s = "Java";
-        s.concat(" World");
-        System.out.println(s);   // Java
+        // String s = "Java";
+        // s.concat(" World");
+        // System.out.println(s);   // Java
+
+        //memory becomes
+        // String Pool
+        // ------------
+        // "Java"
+        // "Java World"
+
+        // s → "Java"
+        // But you did not store the new string anywhere. so it gets ignored
+
+
+
+        // 1️⃣ Reverse a String
+        // Method 1: Using Loop
+        // String s = "Java";
+        // for(int i = s.length()-1; i >= 0; i--){
+        //     System.out.print(s.charAt(i));
+        // }
+
+
+        // Method 2: Using StringBuilder
+        // String s = "Java";
+
+        // StringBuilder sb = new StringBuilder(s);
+        // sb.reverse();
+        // System.out.println(sb);
+
+
+
+        // 2️⃣ Check Palindrome String
+        // String s = "Java";
+
+        // String rev = "";
+
+        // for(int i = s.length() - 1; i >= 0; i--){
+        //     rev = rev + s.charAt(i);
+        // }
+
+        // if(s.equals(rev)){
+        //     System.out.println("Pallindrome");
+        // }else{
+        //     System.out.println("Not Pallindrome");
+        // }
+
+
+
+        // 3️⃣ Count Vowels in String
+        // String s = "Java";
+
+        // int count = 0;
+
+        // for(int i = 0; i < s.length(); i++){
+        //     char ch = s.charAt(i);
+
+        //     if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u'||
+        //        ch=='A'||ch=='E'||ch=='I'||ch=='O'||ch=='U'){
+        //         count++;
+        //         System.out.println(ch);
+        //     }
+        // }
+        // System.out.println(count);
+
+
+
+        // 4️⃣ Remove Spaces
+
+        String s = "Java Programming";
+        System.out.println(s.replace(" ",""));
+  
+
     }
 }
