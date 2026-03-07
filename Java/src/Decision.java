@@ -1,5 +1,5 @@
 public class Decision {
-    public static void main(String[] args){
+    public static void main(Strings[] args){
         // 1. if Statement
         // int age = 20;
         // if(age >= 18){

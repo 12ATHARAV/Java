@@ -60,7 +60,7 @@ public class Method_Overloading {
     static void show(double a) {
         System.out.println("double");
     }
-    public static void main(String[] args){
+    public static void main(Strings[] args){
         show(5.5);
     }
 

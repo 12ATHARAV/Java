@@ -32,7 +32,7 @@ public class Methods {
     static int square(int x){
         return x * x;
     }
-    public static void main(String[] args){
+    public static void main(Strings[] args){
         int result = square(4);
         System.out.println(result);
     }

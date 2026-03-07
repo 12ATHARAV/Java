@@ -239,7 +239,7 @@ import java.util.Scanner;
 ///////////////  Binary Search  ////////////////
 
 public class Array{
-    public static void main(String[] args){
+    public static void main(Strings[] args){
         int[] arr = {2,4,6,8,10,12};
 
         int target = 6;

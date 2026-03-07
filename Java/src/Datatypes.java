@@ -49,7 +49,7 @@ public class Datatypes{
     static int x;
     static boolean y;
 
-    public static void main(String[] args){
+    public static void main(Strings[] args){
         System.out.println(x);
         System.out.println(y);
     }

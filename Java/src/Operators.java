@@ -1,5 +1,5 @@
 public class Operators {
-    public static void main(String[] args){
+    public static void main(Strings[] args){
         // 1. Arithmetic Operators
         // int a = 10;
         // int b = 3;
