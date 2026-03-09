@@ -28,7 +28,8 @@ package OOPS;
 //         a.sound();
 //     }
 // }
-
+// Animal → abstract class
+// Dog, Cat → concrete classes
 
 
 
@@ -64,34 +65,5 @@ package OOPS;
 
 
 
-
-//////// Complete Example (Important) //////// 
-
-// abstract class Animal{
-//     abstract void sound();
-// }
-// class Dog extends Animal{
-//     void sound(){
-//         System.out.println("Dog Barks");
-//     }
-// }
-// class Cat extends Animal{
-//     void sound(){
-//         System.out.println("Cat meows");
-//     }
-// }
-// public class Abstract_Class {
-//     public static void main(String[] args){
-//         Animal a;
-
-//         a = new Dog();
-//         a.sound();
-
-//         a = new Cat();
-//         a.sound();
-//     }
-// }
-// Animal → abstract class
-// Dog, Cat → concrete classes
 
 
