@@ -1,4 +1,4 @@
-// import java.util.Scanner;
+import java.util.Scanner;
 
 // class primeLogic {
 //     public boolean isPrime(int n) {
@@ -61,23 +61,62 @@
 
 /// accept 2 numbers and print the tables of all numbers between those 2 numbers
 
-import java.util.Scanner;
+// import java.util.Scanner;
 
-public class primeNo {
-    public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter num1: ");
-        int num1 = sc.nextInt();
+// public class primeNo {
+//     public static void main(String[] args){
+//         Scanner sc = new Scanner(System.in);
+//         System.out.println("Enter num1: ");
+//         int num1 = sc.nextInt();
 
-        System.out.println("Enter num2: "); 
-        int num2 = sc.nextInt();
+//         System.out.println("Enter num2: "); 
+//         int num2 = sc.nextInt();
 
-        for(int i = 1; i <= 10; i++){
-            for(int j = num1; j <= num2; j++){
-                System.out.print((i * j) + "\t");
-            }
-            System.out.println();
-        }
-        sc.close();
-    }
-}
+//         for(int i = 1; i <= 10; i++){
+//             for(int j = num1; j <= num2; j++){
+//                 System.out.print((i * j) + "\t");
+//             }
+//             System.out.println();
+//         }
+//         sc.close();
+//     }
+// }
+
+
+// import java.util.*;
+ 
+// class MyClass
+// {
+//   int radius;
+ 
+//   MyClass(int radius)
+//    {
+//      this.radius=radius;
+//    }
+ 
+//   void area()
+//    {
+//      System.out.println("Area =" + (Math.PI * radius * radius));
+//    }
+ 
+//   void circumference()
+//    {
+//      System.out.println("Circumference =" + (2 * Math.PI * radius));
+//    }
+// }
+ 
+// class primeNo
+// {
+//   public static void main(String args[ ]) 
+//    {
+//      Scanner sc=new Scanner(System.in);
+ 
+//      System.out.println("Enter radius");
+//      int radius = sc.nextInt();
+     
+ 
+//      MyClass m=new MyClass(radius);
+//      m.area();
+//      m.circumference();
+//    }
+// }

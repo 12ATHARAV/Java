@@ -240,27 +240,28 @@
 
 public class Array{
     public static void main(Strings[] args){
-        int[] arr = {2,4,6,8,10,12};
+        // int[] arr = {2,4,6,8,10,12};
 
-        int target = 6;
+        // int target = 6;
 
-        int left = 0;
-        int right = arr.length - 1;
+        // int left = 0;
+        // int right = arr.length - 1;
 
-        while(left <= right){
+        // while(left <= right){
 
-            int mid = (left + right) / 2;
+        //     int mid = (left + right) / 2;
             
-            if(arr[mid] == target){
-                System.out.println("Found at index " + mid);
-                break;
-            }
-            else if(arr[mid] < target){
-                left = mid + 1;
-            }
-            else{
-                right = mid - 1;
-            }
-        }
+        //     if(arr[mid] == target){
+        //         System.out.println("Found at index " + mid);
+        //         break;
+        //     }
+        //     else if(arr[mid] < target){
+        //         left = mid + 1;
+        //     }
+        //     else{
+        //         right = mid - 1;
+        //     }
+        // }
+
     }
 }
