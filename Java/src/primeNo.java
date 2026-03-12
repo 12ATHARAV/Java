@@ -1,4 +1,6 @@
-import java.util.Scanner;
+// import java.util.Scanner;
+
+// import javax.swing.Box;
 
 // class primeLogic {
 //     public boolean isPrime(int n) {
@@ -120,3 +122,65 @@ import java.util.Scanner;
 //      m.circumference();
 //    }
 // }
+
+
+
+
+
+
+// class Cylinder{
+//     double radius, height;
+
+//     Cylinder(double r, double h){
+//         radius = r;
+//         height = h;
+//     }
+// }
+
+// class MyClass{
+//     void calculateVolume(Cylinder b){
+//         System.out.println("Volume: " + Math.PI * b.radius * b.radius * b.height);
+//     }
+//     void calculateTsa(Cylinder b){
+//         System.out.println("Tsa: " + 2 * Math.PI * b.radius * (b.radius + b.height));
+//     }
+// }
+
+// public class primeNo {
+//     public static void main(String[] args){
+//         Cylinder c = new Cylinder(10,11);
+//         MyClass m = new MyClass();
+//         m.calculateVolume(c);
+//         m.calculateTsa(c);
+//     }
+// }
+
+
+
+
+class Box{
+    double length, width, height;
+    Box(double l, double w, double h){
+        length = l;
+        width = w;
+        height = h;
+    }
+}
+class MyClass{
+    Box doubleVal(Box b){
+        Box c = new Box(2*b.length, 2*b.width, 2*b.height);
+        return c;
+    }
+}
+
+public class primeNo {
+    public static void main(String[] args){
+        Box b1 = new Box(10,11,12);
+        MyClass m = new MyClass();
+
+        Box b2 = m.doubleVal(b1);
+
+        System.out.println(b1.length + " " + b1.width + " " + b1.height + " ");
+        System.out.println(b2.length + " " + b2.width + " " + b2.height + " ");
+    }
+}
