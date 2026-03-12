@@ -1,5 +1,13 @@
 package Array;
 
+
+// Optimal Approach (Single Traversal)
+
+// Keep two variables:
+
+// max
+// second
+
 public class SecondLargest {
     public static int findSecondLargest(int[] arr){
         int max = Integer.MIN_VALUE;
@@ -27,3 +35,8 @@ public class SecondLargest {
 // time O(n)
 // space O(1)
 
+// **Logic explained:**
+// - Keep track of two variables — `max` and `second`
+// - If current element is greater than `max` → old `max` becomes `second`, current becomes new `max`
+// - If current element is between `second` and `max` → update `second`
+// - `arr[i] != max` handles **duplicate values** (e.g. `{9, 9, 5}` → second largest is `5`, not `9`)
