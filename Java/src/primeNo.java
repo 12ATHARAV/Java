@@ -158,29 +158,94 @@
 
 
 
-class Box{
-    double length, width, height;
-    Box(double l, double w, double h){
-        length = l;
-        width = w;
-        height = h;
-    }
-}
-class MyClass{
-    Box doubleVal(Box b){
-        Box c = new Box(2*b.length, 2*b.width, 2*b.height);
-        return c;
-    }
-}
+// class Box{
+//     double length, width, height;
+//     Box(double l, double w, double h){
+//         length = l;
+//         width = w;
+//         height = h;
+//     }
+// }
+// class MyClass{
+//     Box doubleVal(Box b){
+//         Box c = new Box(2*b.length, 2*b.width, 2*b.height);
+//         return c;
+//     }
+// }
 
-public class primeNo {
-    public static void main(String[] args){
-        Box b1 = new Box(10,11,12);
-        MyClass m = new MyClass();
+// public class primeNo {
+//     public static void main(String[] args){
+//         Box b1 = new Box(10,11,12);
+//         MyClass m = new MyClass();
 
-        Box b2 = m.doubleVal(b1);
+//         Box b2 = m.doubleVal(b1);
 
-        System.out.println(b1.length + " " + b1.width + " " + b1.height + " ");
-        System.out.println(b2.length + " " + b2.width + " " + b2.height + " ");
-    }
-}
+//         System.out.println(b1.length + " " + b1.width + " " + b1.height + " ");
+//         System.out.println(b2.length + " " + b2.width + " " + b2.height + " ");
+//     }
+// }
+
+
+
+
+// import java.util.*;
+ 
+// class Cylinder
+// {
+//    double radius, height;
+//    Cylinder(double r, double h)
+//     {
+//       radius=r;
+//       height=h;
+//     }
+// }
+ 
+// class Result
+// {
+//   double tsa, volume;
+//   Result(double t, double v)
+//    {
+//      tsa=t;
+//      volume=v;
+//    }
+// }
+ 
+// class Calculator
+// {
+//   Result calculate(Cylinder c)
+//    {
+//      double tsa = 2 * Math.PI * c.radius * (c.radius + c.height);
+//      double volume =  Math.PI * c.radius * c.radius * c.height;
+//      Result r=new Result(tsa, volume);
+//      return r;
+//    }
+
+// }
+ 
+// class Demo
+
+// {
+
+//   public static void main(String args[ ])
+//    {
+//      Scanner sc=new Scanner(System.in);
+
+//      System.out.println("Enter radius");
+//      double r=sc.nextDouble();
+
+//      System.out.println("Enter height");
+//      double h=sc.nextDouble();
+
+//      Cylinder c=new Cylinder(r,h);
+
+//      Calculator cal=new Calculator();
+//      Result res=cal.calculate(c);  
+
+//      System.out.println("tsa of cylinder=" + res.tsa); 
+//      System.out.println("area of cylinder=" + res.volume); 
+
+//      sc.close();
+//    }
+// }
+
+ 
