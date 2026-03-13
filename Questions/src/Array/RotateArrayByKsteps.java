@@ -22,11 +22,11 @@ public class RotateArrayByKsteps {
 
     public static void rotate(int[] arr, int k){
         int n = arr.length;
-        k = k % n;
+        k = k % n;   // If you rotate an array of size 7 by 8 times, it's the same as rotating it once. This "modulo" operator ensures the code doesn't do unnecessary work and prevents index errors if k > n.
 
-        reverse(arr, 0, n-1);
-        reverse(arr, 0, k-1);
-        reverse(arr, k, n-1);
+        reverse(arr, 0, n-1);   //Flips the entire array.
+        reverse(arr, 0, k-1);   //Flips the first k elements back to their correct relative order.
+        reverse(arr, k, n-1);         //Flips the remaining elements back to their correct relative order.
     }
 
     public static void main(String[] args){
