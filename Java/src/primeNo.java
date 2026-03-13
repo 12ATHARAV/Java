@@ -249,3 +249,260 @@
 // }
 
  
+
+
+// Passing parameters to method By Value, 
+//if we write method returning object, that method does not return anything
+
+// class First
+// {
+//   void changeVal(int a, int b)
+//    {
+//      a=a+100;
+//      b=b+100;
+//      System.out.println("Inside changeVal a=" + a + " b=" + b);
+//    }
+// }
+// class Demo
+// {
+//   public static void main(String args[ ])
+//    {
+//      int a=1,b=2;
+//      System.out.println("Before changeVal a=" + a + " b=" + b);
+//      First f=new First();
+//      f.changeVal(a, b);
+//      System.out.println("After changeVal a=" + a + " b=" + b);
+//    }
+// }
+// o/p:
+// Before changeVal a=1 b=2
+// Inside changeVal a=101 b=102
+// After changeVal a=1 b=2
+
+
+
+
+// Passing parameters to method By Ref
+
+// import java.util.*;
+ 
+// class MyClass
+// {
+//      int num;
+//      String res;
+ 
+//      MyClass(int num)
+//       {
+//         this.num=num;
+//       }
+// }
+// class First
+// {
+//   void checkEvenOdd(MyClass m)
+//    {
+//      if(m.num%2==0)
+//                  m.res="Even";
+//      else
+//                  m.res="Odd";
+//    }
+// }
+// class Demo
+// {
+//   public static void main(String args[ ])
+//    {
+//      int num;
+//      Scanner sc=new Scanner(System.in); 
+//      System.out.println("Enter a number");
+//      num=sc.nextInt();
+//      MyClass m=new MyClass(num);
+//      First f=new First();
+//      f.checkEvenOdd(m);  
+//      System.out.println("The number " + m.num + " is: " + m.res);
+//    }
+// }
+
+
+
+
+/// accept fno, sno and mul, div, subs, add
+// import java.util.*;
+
+// class First
+
+// {
+//      int fno, sno;
+//      int sum, sub, mult, div;
+
+//      First(int fno, int sno)
+//       {
+//         this.fno=fno;
+//         this.sno=sno;
+//       }
+// }
+ 
+// class MyLogic
+// {
+
+//   void calculate(First f)
+//    {
+//      f.sum=f.fno + f.sno;
+//      f.sub=f.fno - f.sno;
+//      f.mult=f.fno * f.sno;
+//      f.div=f.fno / f.sno;
+//    }
+// }
+ 
+// class Demo
+// {
+//   public static void main(String args[ ])
+//    {
+//      int fno, sno;
+ 
+//      Scanner sc=new Scanner(System.in);
+
+//      System.out.println("Enter first number");
+//      fno=sc.nextInt();
+
+//      System.out.println("Enter second number");
+//      sno=sc.nextInt();
+ 
+//      First f=new First(fno, sno);
+ 
+//      MyLogic m=new MyLogic();
+
+//      m.calculate(f);
+
+//       System.out.println("The summation of " + f.fno + " and " + f.sno + " is: " + f.sum);
+//       System.out.println("The subtraction of " + f.fno + " and " + f.sno + " is: " + f.sub);
+//       System.out.println("The multiplication of " + f.fno + " and " + f.sno + " is: " + f.mult);
+//       System.out.println("The division of " + f.fno + " and " + f.sno + " is: " + f.div);
+
+//     sc.close();
+
+//    }
+
+// }
+
+// // o/p:
+
+
+// // Enter first number
+// // 100
+
+// // Enter second number
+// // 20
+
+// // The summation of 100 and 20 is: 120
+// // The subtraction of 100 and 20 is: 80
+// // The multiplication of 100 and 20 is: 2000
+// // The division of 100 and 20 is: 5
+
+ 
+
+
+/// circle -> take radius and output -> area, circumference
+
+// import java.util.*;
+
+// class Circle{
+//     double radius;                //input
+//     double area, circumference;   // outputs
+
+//     Circle(double radius)
+//     {
+//         this.radius = radius;
+//     }
+// }
+ 
+// class MyLogic
+// {
+//   void calculate(Circle f)
+//    {
+//      f.area = Math.PI * f.radius * f.radius;
+//      f.circumference = 2 * Math.PI * f.radius;
+//    }
+// }
+
+// class Demo
+// {
+//   public static void main(String args[ ])
+//    {
+//     double radius;
+ 
+//      Scanner sc=new Scanner(System.in);
+
+//      System.out.println("Enter radius: ");
+//      radius = sc.nextDouble();
+
+ 
+//      Circle f=new Circle(radius);
+ 
+//      MyLogic m=new MyLogic();
+
+//      m.calculate(f);
+
+//       System.out.println("The area is: " + f.area);
+//       System.out.println("The circumference is: " + f.circumference);
+      
+
+//     sc.close();
+
+//    }
+
+// }
+
+
+
+/// circleArea, circleCircum, cylinderTsa, cylinderVol
+
+// import java.util.*;
+
+// class CircleCylinder{
+//     double circleRadius, cylinderHeight;                //input
+//     double circleArea, circleCircum, cylinderTsa, cylinderVol;   // outputs
+
+//     CircleCylinder(double radius, double height)
+//     {
+//         this.radius = radius;
+//         this.height = height;
+//     }
+// }
+ 
+// class MyLogic
+// {
+//   void calculate(CircleCylinder f)
+//    {
+//      f.circleArea = Math.PI * f.radius * f.radius;
+//      f.circleCircum = 2 * Math.PI * f.radius;
+//      f.cylinderTsa = 2 * Math.PI * f.radius * (f.radius + f.height);
+//      f.cylinderVol = Math.PI * f.radius * f.radius * f.height;
+//    }
+// }
+
+// class Demo
+// {
+//   public static void main(String args[ ])
+//    {
+//     double radius, height;
+ 
+//      Scanner sc=new Scanner(System.in);
+
+//      System.out.println("Enter radius: ");
+//      radius = sc.nextDouble();
+
+ 
+//      CircleCylinder f=new CircleCylinder(radius, height);
+ 
+//      MyLogic m=new MyLogic();
+
+//      m.calculate(f);
+
+//       System.out.println("The area is: " + f.area);
+//       System.out.println("The circumference is: " + f.circumference);
+      
+
+//     sc.close();
+
+//    }
+
+// }
