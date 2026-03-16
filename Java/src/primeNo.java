@@ -547,72 +547,128 @@
 
 //////////// Static Keyword //////////////
 
-class First{
-  static int a=100;
+// class First{
+//   static int a=100;
 
-  int b=400;
-  First(){
-    System.out.println("This is constructor in First class");
-   }
+//   int b=400;
+//   First(){
+//     System.out.println("This is constructor in First class");
+//    }
  
-  static void meth(){
-    System.out.println("This is static method");
-  }  
+//   static void meth(){
+//     System.out.println("This is static method");
+//   }  
  
-  static{
-    System.out.println("This is static block in First class");
-   }
+//   static{
+//     System.out.println("This is static block in First class");
+//    }
  
+//    {
+//     System.out.println("This is instance block in First class");
+//    }
+// }
+ 
+// class Demo
+// {
+//   static{
+//     System.out.println("This is static block in Demo class");
+//    }
+//   public static void main(String args[ ]){
+
+//      System.out.println("Hello");
+//      System.out.println(First.a);
+
+//      First.meth();
+
+//      First f1=new First();
+//      First f2=new First();
+
+//      System.out.println(f1.a);
+//      System.out.println(f2.a);
+ 
+//      f1.a=200;
+
+//      System.out.println(f2.a);
+//      System.out.println(First.a);
+ 
+//      f1.meth();
+//      f2.meth();
+
+//    }
+
+// }
+
+// // o/p:
+
+// // This is static block in Demo class
+// // Hello
+// // This is static block in First class
+// // 100
+// // This is static method
+// // This is instance block in First class
+// // This is constructor in First class
+// // This is instance block in First class
+// // This is constructor in First class
+// // 100
+// // 100
+// // 200
+// // 200
+// // This is static method
+// // This is static method
+ 
+
+
+///////////// final keyword /////////////
+
+// class First
+// {
+//   final int a=100;
+// }
+ 
+// class Demo
+// {
+//   public static void main(String args[ ])
+//    {
+//      First f1=new First();
+//      System.out.println(f1.a);
+//      //f1.a=100;    ----> If uncommented, this will raise compile time error.
+//    }
+// }
+
+
+
+
+class First
+{
+  final int a;
+ 
+  First()
    {
-    System.out.println("This is instance block in First class");
+     a=123;
+   }
+ 
+  First(int num)
+   {
+     a=num;
    }
 }
  
 class Demo
 {
-  static{
-    System.out.println("This is static block in Demo class");
-   }
-  public static void main(String args[ ]){
-
-     System.out.println("Hello");
-     System.out.println(First.a);
-
-     First.meth();
-
+  public static void main(String args[ ])
+   {
      First f1=new First();
-     First f2=new First();
-
      System.out.println(f1.a);
+     //f1.a=100; ----> If uncommented, this will raise compile time error.
+ 
+     First f2=new First(789);
      System.out.println(f2.a);
  
-     f1.a=200;
-
-     System.out.println(f2.a);
-     System.out.println(First.a);
- 
-     f1.meth();
-     f2.meth();
-
+     First f3=new First(120);
+     System.out.println(f3.a);
    }
-
 }
-
 // o/p:
-
-// This is static block in Demo class
-// Hello
-// This is static block in First class
-// 100
-// This is static method
-// This is instance block in First class
-// This is constructor in First class
-// This is instance block in First class
-// This is constructor in First class
-// 100
-// 100
-// 200
-// 200
-// This is static method
-// This is static method
- 
+// 123
+// 789
+// 120
