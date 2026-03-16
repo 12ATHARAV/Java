@@ -252,7 +252,9 @@
 
 
 // Passing parameters to method By Value, 
-//if we write method returning object, that method does not return anything
+//if we write method accepting object, that method does not return anything
+//because that method is making changes in the same object
+
 
 // class First
 // {
@@ -455,88 +457,162 @@
 
 /// circleArea, circleCircum, cylinderTsa, cylinderVol
 
-import java.util.*;
-class Circle{
-    double circleRadius;                //input
-    double circleArea, circleCircum;   // outputs
+// import java.util.*;
+// class Circle{
+//     double circleRadius;                //input
+//     double circleArea, circleCircum;   // outputs
 
-    Circle(double circleRadius)
-    {
-        this.circleRadius = circleRadius;
-    }
-}
+//     Circle(double circleRadius)
+//     {
+//         this.circleRadius = circleRadius;
+//     }
+// }
 
-class Cylinder{
-    double cylinderRadius, cylinderHeight;                //input
-    double cylinderTsa, cylinderVol;   // outputs
+// class Cylinder{
+//     double cylinderRadius, cylinderHeight;                //input
+//     double cylinderTsa, cylinderVol;   // outputs
 
-    Cylinder(double cylinderRadius, double cylinderHeight)
-    {
-        this.cylinderRadius = cylinderRadius;
-        this.cylinderHeight = cylinderHeight;
-    }
-}
+//     Cylinder(double cylinderRadius, double cylinderHeight)
+//     {
+//         this.cylinderRadius = cylinderRadius;
+//         this.cylinderHeight = cylinderHeight;
+//     }
+// }
  
-class MyLogicCircle
-{
-  void calculateCircle(Circle ci)
-   {
-     ci.circleArea = Math.PI * ci.circleRadius * ci.circleRadius;
-     ci.circleCircum = 2 * Math.PI * ci.circleRadius;
-   }
-}
+// class MyLogicCircle
+// {
+//   void calculateCircle(Circle ci)
+//    {
+//      ci.circleArea = Math.PI * ci.circleRadius * ci.circleRadius;
+//      ci.circleCircum = 2 * Math.PI * ci.circleRadius;
+//    }
+// }
 
-class MyLogicCylinder
-{
-  void calculateCylinder(Cylinder cy)
-   {
-     cy.cylinderTsa = 2 * Math.PI * cy.cylinderRadius * (cy.cylinderRadius + cy.cylinderHeight);
-     cy.cylinderVol =  Math.PI * cy.cylinderRadius * cy.cylinderRadius * cy.cylinderHeight;
-   }
-}
+// class MyLogicCylinder
+// {
+//   void calculateCylinder(Cylinder cy)
+//    {
+//      cy.cylinderTsa = 2 * Math.PI * cy.cylinderRadius * (cy.cylinderRadius + cy.cylinderHeight);
+//      cy.cylinderVol =  Math.PI * cy.cylinderRadius * cy.cylinderRadius * cy.cylinderHeight;
+//    }
+// }
 
-class Demo
-{
-  public static void main(String args[ ])
-   {
-     double circleRadius, cylinderRadius, cylinderHeight;
+// class Demo
+// {
+//   public static void main(String args[ ])
+//    {
+//      double circleRadius, cylinderRadius, cylinderHeight;
  
-     Scanner sc=new Scanner(System.in);
+//      Scanner sc=new Scanner(System.in);
 
-     System.out.print("Enter radius of circle: ");
-     circleRadius = sc.nextDouble();
-
- 
-     Circle ci =new Circle(circleRadius);
- 
-     MyLogicCircle m=new MyLogicCircle();
-
-     m.calculateCircle(ci);
-
-      System.out.println("The area of circle is: " + ci.circleArea);
-      System.out.println("The circumference of circle is: " + ci.circleCircum);
-
-    System.out.println();
-
-     System.out.print("Enter radius of cylinder: ");
-     cylinderRadius = sc.nextDouble();
-
-     System.out.print("Enter height of cylinder: ");
-     cylinderHeight = sc.nextDouble();
+//      System.out.print("Enter radius of circle: ");
+//      circleRadius = sc.nextDouble();
 
  
-     Cylinder cy =new Cylinder(cylinderRadius, cylinderHeight);
+//      Circle ci =new Circle(circleRadius);
  
-     MyLogicCylinder a=new MyLogicCylinder();
+//      MyLogicCircle m=new MyLogicCircle();
 
-     a.calculateCylinder(cy);
+//      m.calculateCircle(ci);
 
-      System.out.println("The tsa of cylinder is: " + cy.cylinderTsa);
-      System.out.println("The volume of cylinder is: " + cy.cylinderVol);
+//       System.out.println("The area of circle is: " + ci.circleArea);
+//       System.out.println("The circumference of circle is: " + ci.circleCircum);
+
+//     System.out.println();
+
+//      System.out.print("Enter radius of cylinder: ");
+//      cylinderRadius = sc.nextDouble();
+
+//      System.out.print("Enter height of cylinder: ");
+//      cylinderHeight = sc.nextDouble();
+
+ 
+//      Cylinder cy =new Cylinder(cylinderRadius, cylinderHeight);
+ 
+//      MyLogicCylinder a=new MyLogicCylinder();
+
+//      a.calculateCylinder(cy);
+
+//       System.out.println("The tsa of cylinder is: " + cy.cylinderTsa);
+//       System.out.println("The volume of cylinder is: " + cy.cylinderVol);
       
 
-    sc.close();
+//     sc.close();
+
+//    }
+
+// }
+
+
+
+//////////// Static Keyword //////////////
+
+class First{
+  static int a=100;
+
+  int b=400;
+  First(){
+    System.out.println("This is constructor in First class");
+   }
+ 
+  static void meth(){
+    System.out.println("This is static method");
+  }  
+ 
+  static{
+    System.out.println("This is static block in First class");
+   }
+ 
+   {
+    System.out.println("This is instance block in First class");
+   }
+}
+ 
+class Demo
+{
+  static{
+    System.out.println("This is static block in Demo class");
+   }
+  public static void main(String args[ ]){
+
+     System.out.println("Hello");
+     System.out.println(First.a);
+
+     First.meth();
+
+     First f1=new First();
+     First f2=new First();
+
+     System.out.println(f1.a);
+     System.out.println(f2.a);
+ 
+     f1.a=200;
+
+     System.out.println(f2.a);
+     System.out.println(First.a);
+ 
+     f1.meth();
+     f2.meth();
 
    }
 
 }
+
+// o/p:
+
+// This is static block in Demo class
+// Hello
+// This is static block in First class
+// 100
+// This is static method
+// This is instance block in First class
+// This is constructor in First class
+// This is instance block in First class
+// This is constructor in First class
+// 100
+// 100
+// 200
+// 200
+// This is static method
+// This is static method
+ 
