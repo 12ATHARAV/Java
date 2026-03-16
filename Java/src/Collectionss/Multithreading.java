@@ -29,17 +29,37 @@ package Collectionss;
 
 // Method 2: Runnable Interface (Better Approach)
 
-class MyThread implements Runnable{
+// class MyThread implements Runnable{
+//     public void run(){
+//         System.out.println("Thread running using Runnable");
+//     }
+// }
+// public class Multithreading {
+//     public static void main(String[] args) {
+//         MyThread obj = new MyThread();
+
+//         Thread t = new Thread(obj);
+//         t.start();
+
+//     }
+// }
+
+
+
+// Example: Multiple Threads
+class MyThread extends Thread{
     public void run(){
-        System.out.println("Thread running using Runnable");
+        for(int i=1; i<=3; i++){
+            System.out.println("Thread: " + i);
+        }
     }
 }
 public class Multithreading {
-    public static void main(String[] args) {
-        MyThread obj = new MyThread();
+    public static void main(String[] args){
+        MyThread t1 = new MyThread();
+        MyThread t2 = new MyThread();
 
-        Thread t = new Thread(obj);
-        t.start();
-        
+        t1.start();
+        t2.start();
     }
 }
