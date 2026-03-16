@@ -455,54 +455,88 @@
 
 /// circleArea, circleCircum, cylinderTsa, cylinderVol
 
-// import java.util.*;
+import java.util.*;
+class Circle{
+    double circleRadius;                //input
+    double circleArea, circleCircum;   // outputs
 
-// class CircleCylinder{
-//     double circleRadius, cylinderHeight;                //input
-//     double circleArea, circleCircum, cylinderTsa, cylinderVol;   // outputs
+    Circle(double circleRadius)
+    {
+        this.circleRadius = circleRadius;
+    }
+}
 
-//     CircleCylinder(double radius, double height)
-//     {
-//         this.radius = radius;
-//         this.height = height;
-//     }
-// }
+class Cylinder{
+    double cylinderRadius, cylinderHeight;                //input
+    double cylinderTsa, cylinderVol;   // outputs
+
+    Cylinder(double cylinderRadius, double cylinderHeight)
+    {
+        this.cylinderRadius = cylinderRadius;
+        this.cylinderHeight = cylinderHeight;
+    }
+}
  
-// class MyLogic
-// {
-//   void calculate(CircleCylinder f)
-//    {
-//      f.circleArea = Math.PI * f.radius * f.radius;
-//      f.circleCircum = 2 * Math.PI * f.radius;
-//      f.cylinderTsa = 2 * Math.PI * f.radius * (f.radius + f.height);
-//      f.cylinderVol = Math.PI * f.radius * f.radius * f.height;
-//    }
-// }
+class MyLogicCircle
+{
+  void calculateCircle(Circle ci)
+   {
+     ci.circleArea = Math.PI * ci.circleRadius * ci.circleRadius;
+     ci.circleCircum = 2 * Math.PI * ci.circleRadius;
+   }
+}
 
-// class Demo
-// {
-//   public static void main(String args[ ])
-//    {
-//     double radius, height;
+class MyLogicCylinder
+{
+  void calculateCylinder(Cylinder cy)
+   {
+     cy.cylinderTsa = 2 * Math.PI * cy.cylinderRadius * (cy.cylinderRadius + cy.cylinderHeight);
+     cy.cylinderVol =  Math.PI * cy.cylinderRadius * cy.cylinderRadius * cy.cylinderHeight;
+   }
+}
+
+class Demo
+{
+  public static void main(String args[ ])
+   {
+     double circleRadius, cylinderRadius, cylinderHeight;
  
-//      Scanner sc=new Scanner(System.in);
+     Scanner sc=new Scanner(System.in);
 
-//      System.out.println("Enter radius: ");
-//      radius = sc.nextDouble();
+     System.out.print("Enter radius of circle: ");
+     circleRadius = sc.nextDouble();
 
  
-//      CircleCylinder f=new CircleCylinder(radius, height);
+     Circle ci =new Circle(circleRadius);
  
-//      MyLogic m=new MyLogic();
+     MyLogicCircle m=new MyLogicCircle();
 
-//      m.calculate(f);
+     m.calculateCircle(ci);
 
-//       System.out.println("The area is: " + f.area);
-//       System.out.println("The circumference is: " + f.circumference);
+      System.out.println("The area of circle is: " + ci.circleArea);
+      System.out.println("The circumference of circle is: " + ci.circleCircum);
+
+    System.out.println();
+
+     System.out.print("Enter radius of cylinder: ");
+     cylinderRadius = sc.nextDouble();
+
+     System.out.print("Enter height of cylinder: ");
+     cylinderHeight = sc.nextDouble();
+
+ 
+     Cylinder cy =new Cylinder(cylinderRadius, cylinderHeight);
+ 
+     MyLogicCylinder a=new MyLogicCylinder();
+
+     a.calculateCylinder(cy);
+
+      System.out.println("The tsa of cylinder is: " + cy.cylinderTsa);
+      System.out.println("The volume of cylinder is: " + cy.cylinderVol);
       
 
-//     sc.close();
+    sc.close();
 
-//    }
+   }
 
-// }
+}
