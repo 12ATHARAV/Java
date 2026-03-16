@@ -22,3 +22,7 @@ public class ValidPalindrome {
         System.out.println(isPalindrome(s));
     }
 }
+
+
+// Time: O(n)
+// Space: O(1)
