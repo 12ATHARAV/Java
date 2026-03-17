@@ -16,6 +16,6 @@ public class CountVowels {
     }
 
     public static void main(String[] args){
-        count("Hell");
+        count("Hello");
     }
 }
