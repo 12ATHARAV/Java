@@ -638,18 +638,62 @@
 
 
 
+// class First
+// {
+//   final int a;
+ 
+//   First()
+//    {
+//      a=123;
+//    }
+ 
+//   First(int num)
+//    {
+//      a=num;
+//    }
+// }
+ 
+// class Demo
+// {
+//   public static void main(String args[ ])
+//    {
+//      First f1=new First();
+//      System.out.println(f1.a);
+//      //f1.a=100; ----> If uncommented, this will raise compile time error.
+ 
+//      First f2=new First(789);
+//      System.out.println(f2.a);
+ 
+//      First f3=new First(120);
+//      System.out.println(f3.a);
+//    }
+// }
+// o/p:
+// 123
+// 789
+// 120
+
+
+
+
 class First
 {
-  final int a;
- 
-  First()
+  void meth()
    {
-     a=123;
+     System.out.println("meth defined in First class");
+   }
+}
+ 
+class Second extends First
+{
+  void meth()
+   {
+     System.out.println("meth defined in Second class");
    }
  
-  First(int num)
+  void access()
    {
-     a=num;
+     super.meth();
    }
 }
  
@@ -657,18 +701,13 @@ class Demo
 {
   public static void main(String args[ ])
    {
-     First f1=new First();
-     System.out.println(f1.a);
-     //f1.a=100; ----> If uncommented, this will raise compile time error.
- 
-     First f2=new First(789);
-     System.out.println(f2.a);
- 
-     First f3=new First(120);
-     System.out.println(f3.a);
+     Second s=new Second();
+     s.meth();
+     s.access(); 
    }
 }
-// o/p:
-// 123
-// 789
-// 120
+
+ 
+ 
+ 
+ 
