@@ -301,24 +301,48 @@
 
 // Method accepting object as a parameter
 
-class Box{
-    double width, height, length;
+// class Box{
+//     double width, height, length;
 
-    Box(double w, double h, double l){
-        width = w;
-        height = h;
-        length = l;
+//     Box(double w, double h, double l){
+//         width = w;
+//         height = h;
+//         length = l;
+//     }
+// }
+// class Myclass{
+//     void volume(Box b){
+//         System.out.println("volume: " + b.width * b.height * b.length);
+//     }
+// }
+// public class practiceDemo {
+//     public static void main(String[] args) {
+//         Box c = new Box(10, 11, 12);
+//         Myclass m = new Myclass();
+//         m.volume(c);
+//     }
+// }
+
+
+
+// Method returning objects  (pg  29)
+
+class First{
+    void display(){
+        System.out.println("This is display.");
     }
 }
-class Myclass{
-    void volume(Box b){
-        System.out.println("volume: " + b.width * b.height * b.length);
+class Second{
+    First meth(){
+        First f = new First();
+        return f;
     }
 }
 public class practiceDemo {
     public static void main(String[] args) {
-        Box c = new Box(10, 11, 12);
-        Myclass m = new Myclass();
-        m.volume(c);
+        Second s = new Second();
+        First f1;
+        f1 = s.meth();
+        f1.display();
     }
 }
