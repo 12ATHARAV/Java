@@ -327,22 +327,54 @@
 
 // Method returning objects  (pg  29)
 
-class First{
-    void display(){
-        System.out.println("This is display.");
+// class First{
+//     void display(){
+//         System.out.println("This is display.");
+//     }
+// }
+// class Second{
+//     First meth(){
+//         First f = new First();
+//         return f;
+//     }
+// }
+// public class practiceDemo {
+//     public static void main(String[] args) {
+//         Second s = new Second();
+//         First f1;
+//         f1 = s.meth();
+//         f1.display();
+//     }
+// }
+
+
+
+// program showing object acceptance and return together
+// ---- returns double of the value passed
+
+class Box{
+    double width, height, length;
+
+    Box(double w, double h, double l){
+        width = w;
+        height = h;
+        length = l;
     }
 }
-class Second{
-    First meth(){
-        First f = new First();
-        return f;
+class Myclass{
+    Box twice(Box b){
+        Box c = new Box(b.width*2, b.height*2, b.length*2);
+        return c;
     }
 }
 public class practiceDemo {
     public static void main(String[] args) {
-        Second s = new Second();
-        First f1;
-        f1 = s.meth();
-        f1.display();
+        Box b1 = new Box(10, 11, 12);
+        Myclass m = new Myclass();
+
+        Box b2 = m.twice(b1);
+
+        System.out.println(b1.width + " " + b1.height + " " + b1.length);
+        System.out.println(b2.width + " " + b2.height + " " + b2.length);
     }
 }
