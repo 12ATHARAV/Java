@@ -274,3 +274,25 @@
 
 
 
+// Assigning object reference variable  (pg 25)
+
+class Box{
+    double width, height, length;
+}
+public class practiceDemo {
+    public static void main(String[] args) {
+        Box b1 = new Box();
+
+        b1.height = 10;
+        b1.length = 20;
+        b1.width = 30;
+
+        Box b2 = b1;
+
+        System.out.println("volume: " + b1.height * b1.width * b1.length);
+        System.out.println("volume: " + b2.height * b2.width * b2.length);
+
+        b1.width = 666;
+        System.out.println(b2.width);
+    }
+}
