@@ -1,0 +1,276 @@
+// public class practiceDemo {
+//     public static void main(String[] args) {
+//         System.out.println("Hello Atharav");
+//     }
+// }
+
+
+// character (pg 6)
+
+// public class practiceDemo {
+//     public static void main(String[] args) {
+//         char c1, c2;
+//         c1 = 'A';
+//         c2 = 66;
+
+//         System.out.println(c1);
+//         System.out.println(c2);
+//     }
+// }
+
+
+
+// boolean (pg 6)
+
+// public class practiceDemo {
+//     public static void main(String[] args) {
+//         boolean b;
+//         b = true;
+//         System.out.println(b);
+
+//         int m = 100, n = 200;
+//         b = m > n;
+//         System.out.println(b);
+//     }
+// }
+
+
+
+// command line arguments (pg 9)
+
+// public class practiceDemo {
+//     public static void main(String[] args) {
+//         System.out.println(args[1]);
+//     }
+// }
+
+// public class practiceDemo {
+//     public static void main(String[] args) {
+//         int num1 = Integer.parseInt(args[0]);
+//         int num2 = Integer.parseInt(args[1]);
+//         int sum = num1 + num2;
+//         System.out.println("Summation of " + num1 + " and " + num2 + " is " + sum);
+//     }
+// }
+
+
+
+// operators (pg 10)
+
+//prefix
+// public class practiceDemo {
+//     public static void main(String[] args) {
+//         int i = 10;
+//         int j = ++i;
+//         System.out.println(i);
+//         System.out.println(j);
+//     }
+// }
+
+
+//postfix
+// public class practiceDemo {
+//     public static void main(String[] args) {
+//         int i = 10;
+//         int j = i++;
+//         System.out.println(i);
+//         System.out.println(j);
+//     }
+// }
+
+
+
+// sum and reverse digits
+
+// public class practiceDemo {
+//     public static void main(String[] args) {
+//         int num = Integer.parseInt(args[0]);
+//         int sum = 0;
+//         int rev = 0;
+
+//         while(num > 0){
+//             sum = sum + num % 10;
+//             rev = rev * 10 + num % 10;
+//             num = num / 10;
+//         }
+
+//         System.out.println("Summation of digits: " + sum);
+//         System.out.println("Reverse of digits: " + rev);
+//     }
+// }
+
+
+
+// simple java class    (pg - 14)
+// class Box{
+//     double width, height, length;
+// }
+// public class practiceDemo {
+//     public static void main(String[] args) {
+//         Box b = new Box();
+//         b.width = 10;
+//         b.height = 11;
+//         b.length = 12;
+//         System.out.println("Volume: " + b.width * b.height * b.length);
+//     }
+// }
+
+
+
+// simple method (pg 16)
+// class Box{
+//     double height, width, length;
+//     void Volume(){
+//         System.out.println("Volume: " + width*height*length);
+//     }
+// }
+// public class practiceDemo {
+//     public static void main(String[] args) {
+//         Box b = new Box();
+//         b.height = 10;
+//         b.length = 12;
+//         b.width = 14;
+//         b.Volume();
+//     }
+// }
+
+
+
+// Method accepting parameter (pg 17)
+// class First{
+//     void square(int num){
+//         System.out.println("Square: " + num*num);
+//     }
+// }
+// public class practiceDemo {
+//     public static void main(String[] args) {
+//         First f = new First();
+//         f.square(12);
+//     }
+// }
+
+
+
+// Method returning parameters (pg 18)
+
+// class First{
+//     int square(int num){
+//         return num*num;
+//     }
+// }
+// public class practiceDemo {
+//     public static void main(String[] args) {
+//         First f = new First();
+//         int result;
+//         result = f.square(123);
+//         System.out.println("Square is: "+ result);
+//     }
+// }
+
+
+
+// using method to "assign values" to the set of instance variables
+
+// class Box{
+//     double width, height, length;  //instance variable
+
+//     void assignVal(double w, double h, double l){
+//         width = w;                  // w -> local variable
+//         height = h;
+//         length = l;
+//     }
+
+//     void Volume(){
+//         System.out.println("Volume: " + width * height * length);
+//     }
+// }
+// public class practiceDemo {
+//      public static void main(String[] args) {
+//         Box b1 = new Box();          // b1 -> local variable
+//         b1.assignVal(12,13,14);
+//         b1.Volume();
+
+//         Box b2 = new Box();
+//         b2.assignVal(15,16,17);
+//         b2.Volume();
+//      }
+// }
+
+
+
+//  this keyword    (pg  21)
+
+// class Box{
+//     double width, height, length;
+
+//     void assignVal(double width, double height, double length){
+//         this.width = width;
+//         this.height = height;
+//         this.length = length;
+//     }
+
+//     void Volume(){
+//         System.out.println("Volume: " + width * height * length);
+//     }
+// }
+// public class practiceDemo {
+//     public static void main(String[] args) {
+//         Box b1 = new Box();
+//         b1.assignVal(10, 12, 15);
+//         b1.Volume();
+
+//         Box b2 = new Box();
+//         b2.assignVal(20, 40,60);
+//         b2.Volume();
+//     }
+// }
+
+
+
+//  parameterless constructor   (pg 23)
+
+// class Box{
+//     double width, height, length;
+
+//     Box(){
+//         width = 10;
+//         height = 11;
+//         length = 12;
+//     }
+//     void volume(){
+//         System.out.println("volume: " + width * height * length);
+//     }
+// }
+// public class practiceDemo {
+//     public static void main(String[] args) {
+//         Box b = new Box();
+//         b.volume();
+//     }
+// }
+
+
+
+// parameterized constructor  (pg 24)
+
+// class Box{
+//     double width, height, length;
+
+//     Box(double w, double h, double l){
+//         width = w;
+//         height = h;
+//         length = l;
+//     }
+
+//     void volume(){
+//         System.out.println("volume: " + width * height * length);
+//     }
+// }
+// public class practiceDemo {
+//     public static void main(String[] args) {
+//         Box b = new Box(10,11,15);
+//         b.volume();
+//     }
+// }
+
+
+

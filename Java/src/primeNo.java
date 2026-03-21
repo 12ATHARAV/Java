@@ -676,38 +676,185 @@
 
 
 
-class First
-{
-  void meth()
-   {
-     System.out.println("meth defined in First class");
-   }
-}
+// class First
+// {
+//   void meth()
+//    {
+//      System.out.println("meth defined in First class");
+//    }
+// }
  
-class Second extends First
-{
-  void meth()
-   {
-     System.out.println("meth defined in Second class");
-   }
+// class Second extends First
+// {
+//   void meth()
+//    {
+//      System.out.println("meth defined in Second class");
+//    }
  
-  void access()
-   {
-     super.meth();
-   }
-}
+//   void access()
+//    {
+//      super.meth();
+//    }
+// }
  
-class Demo
-{
-  public static void main(String args[ ])
-   {
-     Second s=new Second();
-     s.meth();
-     s.access(); 
-   }
-}
+// class Demo
+// {
+//   public static void main(String args[ ])
+//    {
+//      Second s=new Second();
+//      s.meth();
+//      s.access(); 
+//    }
+// }
 
  
+
  
- 
- 
+// import java.util.Scanner;
+// class Operation {
+//     double num1, num2;
+    
+//     Operation(double n1, double n2) {
+//         num1 = n1;
+//         num2 = n2;
+//     }
+    
+//     void calculate() {
+//         System.out.println("Calculate in Operation class");
+//     }
+// }
+
+// class Addition extends Operation {
+//     Addition(double n1, double n2) {
+//         super(n1, n2);
+//     }
+    
+//     void calculate() {
+//         System.out.println("Addition: " + (num1 + num2));
+//     }
+// }
+
+// class Subtraction extends Operation {
+//     Subtraction(double n1, double n2) {
+//         super(n1, n2);
+//     }
+    
+//     void calculate() {
+//         System.out.println("Subtraction: " + (num1 - num2));
+//     }
+// }
+
+// class Multiplication extends Operation {
+//     Multiplication(double n1, double n2) {
+//         super(n1, n2);
+//     }
+    
+//     void calculate() {
+//         System.out.println("Multiplication: " + (num1 * num2));
+//     }
+// }
+
+// class Division extends Operation {
+//     Division(double n1, double n2) {
+//         super(n1, n2);
+//     }
+    
+//     void calculate() {
+//           System.out.println("Division: " + (num1 / num2));
+//     }
+// }
+
+// class ArithmeticDemo {
+//     void performOperation(Operation op) {
+//         op.calculate();
+//     }
+    
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         System.out.print("Enter first number: ");
+//         double num1 = sc.nextDouble();
+//         System.out.print("Enter second number: ");
+//         double num2 = sc.nextDouble();
+        
+//         Addition add = new Addition(num1, num2);
+//         Subtraction sub = new Subtraction(num1, num2);
+//         Multiplication mul = new Multiplication(num1, num2);
+//         Division div = new Division(num1, num2);
+        
+//         ArithmeticDemo demo = new ArithmeticDemo();
+//         demo.performOperation(add);
+//         demo.performOperation(sub);
+//         demo.performOperation(mul);
+//         demo.performOperation(div);
+        
+//         sc.close();
+//     }
+// }
+
+
+
+
+// tak p,n r, find out CI and SI
+
+import java.util.Scanner;
+class Values {
+    double p, n;
+    int r;
+    
+    Values(double p, double n, int r) {
+        this.p = p;
+        this.n = n;
+        this.r = r;
+    }
+    
+    void calculate() {
+        System.out.println("Calculate in Operation class");
+    }
+}
+
+class Simple extends Values {
+    Simple(double p, double n, int r) {
+        super(p, n, r);
+    }
+    
+    void calculate() {
+        System.out.println("Simple Interest: " + ((p * n * r) / 100));
+    }
+}
+
+class Compound extends Values {
+    Compound(double p, double n, int r) {
+        super(p, n, r);
+    }
+    
+    void calculate() {
+        double amount = p * Math.pow((1 + r / 100.0), n);
+        double ci = amount - p;
+        System.out.println("Compound Interest: " + ci);
+    }
+}
+
+class InterestDemo {
+    void performOperation(Values op) {
+        op.calculate();
+    }
+    
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter principal(p): ");
+        double p = sc.nextDouble();
+        System.out.print("Enter no. of years(n): ");
+        double n = sc.nextDouble();
+        System.out.print("Enter rate of intrest(r): ");
+        int r = sc.nextInt();
+        
+        Simple s = new Simple(p, n, r);
+        Compound c = new Compound(p, n, r);
+        
+        InterestDemo demo = new InterestDemo();
+        demo.performOperation(s);
+        demo.performOperation(c);
+        
+        sc.close();
+    }
+}
