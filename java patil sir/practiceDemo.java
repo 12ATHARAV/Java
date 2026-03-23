@@ -352,29 +352,76 @@
 // program showing object acceptance and return together
 // ---- returns double of the value passed   (pg - 30)
 
-class Box{
-    double width, height, length;
+// class Box{
+//     double width, height, length;
 
-    Box(double w, double h, double l){
-        width = w;
-        height = h;
-        length = l;
-    }
+//     Box(double w, double h, double l){
+//         width = w;
+//         height = h;
+//         length = l;
+//     }
+// }
+// class Myclass{
+//     Box twice(Box b){
+//         Box c = new Box(b.width*2, b.height*2, b.length*2);
+//         return c;
+//     }
+// }
+// public class practiceDemo {
+//     public static void main(String[] args) {
+//         Box b1 = new Box(10, 11, 12);
+//         Myclass m = new Myclass();
+
+//         Box b2 = m.twice(b1);
+
+//         System.out.println(b1.width + " " + b1.height + " " + b1.length);
+//         System.out.println(b2.width + " " + b2.height + " " + b2.length);
+//     }
+// }
+
+
+// Passing parameters to methods by value & by reference
+//  By value       (pg   32)
+
+// class First{
+//     void changeVal(int a, int b){
+//         a = a + 100;
+//         b = b + 100;
+//         System.out.println("Inside changeVal a = " + a + "   b = " + b);
+//     }
+// }
+// public class practiceDemo {
+//     public static void main(String[] args) {
+//         int a = 1;
+//         int b = 2;
+//         System.out.println("Before changeVal a = " + a + "   b = " + b);
+
+//         First f = new First();
+//         f.changeVal(a, b);
+//         System.out.println("After changeVal a = " + a + "   b = " + b);
+//     }
+// }
+
+
+// By Reference   (pg  33)
+
+class First{
+    int a = 1;
+    int b = 2;
 }
-class Myclass{
-    Box twice(Box b){
-        Box c = new Box(b.width*2, b.height*2, b.length*2);
-        return c;
+class Second{
+    void changeVal(First f){
+        f.a = f.a + 100;
+        f.b = f.b + 100;
     }
 }
 public class practiceDemo {
     public static void main(String[] args) {
-        Box b1 = new Box(10, 11, 12);
-        Myclass m = new Myclass();
+        First obj = new First();
+        System.out.println("Before changeVal a=" + obj.a +"  b=" + obj.b);
 
-        Box b2 = m.twice(b1);
-
-        System.out.println(b1.width + " " + b1.height + " " + b1.length);
-        System.out.println(b2.width + " " + b2.height + " " + b2.length);
+        Second s = new Second();
+        s.changeVal(obj);
+        System.out.println("After changeVal a=" + obj.a + "  b=" + obj.b);
     }
 }
