@@ -796,65 +796,69 @@
 
 // tak p,n r, find out CI and SI
 
-import java.util.Scanner;
-class Values {
-    double p, n;
-    int r;
+// import java.util.Scanner;
+// class Values {
+//     double p, n;
+//     int r;
     
-    Values(double p, double n, int r) {
-        this.p = p;
-        this.n = n;
-        this.r = r;
-    }
+//     Values(double p, double n, int r) {
+//         this.p = p;
+//         this.n = n;
+//         this.r = r;
+//     }
     
-    void calculate() {
-        System.out.println("Calculate in Operation class");
-    }
-}
+//     void calculate() {
+//         System.out.println("Calculate in Operation class");
+//     }
+// }
 
-class Simple extends Values {
-    Simple(double p, double n, int r) {
-        super(p, n, r);
-    }
+// class Simple extends Values {
+//     Simple(double p, double n, int r) {
+//         super(p, n, r);
+//     }
     
-    void calculate() {
-        System.out.println("Simple Interest: " + ((p * n * r) / 100));
-    }
-}
+//     void calculate() {
+//         System.out.println("Simple Interest: " + ((p * n * r) / 100));
+//     }
+// }
 
-class Compound extends Values {
-    Compound(double p, double n, int r) {
-        super(p, n, r);
-    }
+// class Compound extends Values {
+//     Compound(double p, double n, int r) {
+//         super(p, n, r);
+//     }
     
-    void calculate() {
-        double amount = p * Math.pow((1 + r / 100.0), n);
-        double ci = amount - p;
-        System.out.println("Compound Interest: " + ci);
-    }
-}
+//     void calculate() {
+//         double amount = p * Math.pow((1 + r / 100.0), n);
+//         double ci = amount - p;
+//         System.out.println("Compound Interest: " + ci);
+//     }
+// }
 
-class InterestDemo {
-    void performOperation(Values op) {
-        op.calculate();
-    }
+// class InterestDemo {
+//     void performOperation(Values op) {
+//         op.calculate();
+//     }
     
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter principal(p): ");
-        double p = sc.nextDouble();
-        System.out.print("Enter no. of years(n): ");
-        double n = sc.nextDouble();
-        System.out.print("Enter rate of intrest(r): ");
-        int r = sc.nextInt();
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         System.out.print("Enter principal(p): ");
+//         double p = sc.nextDouble();
+//         System.out.print("Enter no. of years(n): ");
+//         double n = sc.nextDouble();
+//         System.out.print("Enter rate of intrest(r): ");
+//         int r = sc.nextInt();
         
-        Simple s = new Simple(p, n, r);
-        Compound c = new Compound(p, n, r);
+//         Simple s = new Simple(p, n, r);
+//         Compound c = new Compound(p, n, r);
         
-        InterestDemo demo = new InterestDemo();
-        demo.performOperation(s);
-        demo.performOperation(c);
+//         InterestDemo demo = new InterestDemo();
+//         demo.performOperation(s);
+//         demo.performOperation(c);
         
-        sc.close();
-    }
-}
+//         sc.close();
+//     }
+// }
+
+
+
+// Write a method returning object of abstract class
