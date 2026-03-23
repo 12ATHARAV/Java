@@ -350,7 +350,7 @@
 
 
 // program showing object acceptance and return together
-// ---- returns double of the value passed
+// ---- returns double of the value passed   (pg - 30)
 
 class Box{
     double width, height, length;
