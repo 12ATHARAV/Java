@@ -405,23 +405,27 @@
 
 // By Reference   (pg  33)
 
-class First{
-    int a = 1;
-    int b = 2;
-}
-class Second{
-    void changeVal(First f){
-        f.a = f.a + 100;
-        f.b = f.b + 100;
-    }
-}
-public class practiceDemo {
-    public static void main(String[] args) {
-        First obj = new First();
-        System.out.println("Before changeVal a=" + obj.a +"  b=" + obj.b);
+// class First{
+//     int a = 1;
+//     int b = 2;
+// }
+// class Second{
+//     void changeVal(First f){
+//         f.a = f.a + 100;
+//         f.b = f.b + 100;
+//     }
+// }
+// public class practiceDemo {
+//     public static void main(String[] args) {
+//         First obj = new First();
+//         System.out.println("Before changeVal a=" + obj.a +"  b=" + obj.b);
 
-        Second s = new Second();
-        s.changeVal(obj);
-        System.out.println("After changeVal a=" + obj.a + "  b=" + obj.b);
-    }
-}
+//         Second s = new Second();
+//         s.changeVal(obj);
+//         System.out.println("After changeVal a=" + obj.a + "  b=" + obj.b);
+//     }
+// }
+
+
+
+//  Method overloading (pg 35)

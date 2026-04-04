@@ -862,3 +862,162 @@
 
 
 // Write a method returning object of abstract class
+// abstract class First {
+//     int a;
+
+//     First(int num) {
+//         a = num;
+//     }
+
+//     abstract void meth();
+// }
+
+// class Second extends First {
+//     int b;
+
+//     Second(int num1) {
+//         super(num1);
+//     }
+
+//     @Override
+//     void meth(){
+//         System.out.println("meth() called. Value of a = " + a);
+//     }
+// }
+
+// public class primeNo {
+//     public static First getObject(int num) {
+//         return new Second(num); 
+//     }
+
+//     public static void main(String[] args) {
+//         First obj = getObject(10); 
+//         obj.meth();
+//     }
+// }
+
+
+
+// DMD using interfaces :--------------
+ 
+// interface MyInter
+
+// {
+
+//   void meth();
+
+// }
+ 
+// class Class1 implements MyInter
+
+// {
+
+//   public void meth()
+
+//    {
+
+//      System.out.println("meth defined in Class1");
+
+//    }
+
+// }
+ 
+// class Class2 implements MyInter
+
+// {
+
+//   public void meth()
+
+//    {
+
+//      System.out.println("meth defined in Class2");
+
+//    }
+
+// }
+ 
+// class MyClass
+
+// {
+
+//   void myMeth(MyInter m)
+
+//    {
+
+//      m.meth();
+
+//    }
+
+// }
+ 
+// class Demo
+
+// {
+
+//   public static void main(String args[ ])
+
+//    {
+
+//      Class1 c1=new Class1();
+
+//      Class2 c2=new Class2();
+ 
+//      MyClass m=new MyClass();
+
+//      m.myMeth(c1);  
+
+//      m.myMeth(c2);  
+
+//    }
+
+// }
+
+
+interface MyInter {
+    void meth();
+}
+
+class Class1 implements MyInter {
+    public void meth() {
+        System.out.println("meth defined in Class1");
+    }
+}
+
+class Class2 implements MyInter {
+    public void meth() {
+        System.out.println("meth defined in Class2");
+    }
+}
+
+class MyClass {
+    MyInter getObject(int choice) {
+        if (choice == 1) {
+            return new Class1();   
+        } else {
+            return new Class2();   
+        }
+    }
+
+    void myMeth(MyInter m) {
+        m.meth();
+    }
+}
+
+class Demo {
+    public static void main(String args[]) {
+
+        MyClass mc = new MyClass();
+
+        MyInter obj1 = mc.getObject(1);   
+        MyInter obj2 = mc.getObject(2);   
+
+        obj1.meth();   
+        obj2.meth();   
+    }
+}
+// ```
+
+// **Output:**
+// ```
+// meth defined in Class1
+// meth defined in Class2
