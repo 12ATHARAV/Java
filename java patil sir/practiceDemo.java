@@ -429,23 +429,55 @@
 
 
 //  Method overloading (pg 35)
-class First{
-    void display(){
-        System.out.println("this is display");
+// class First{
+//     void display(){
+//         System.out.println("this is display");
+//     }
+//     void display(int num){
+//         System.out.println("Square = " + num*num);
+//     }
+//     void display(int num1, int num2){
+//         System.out.println("Multiplication = " + num1 * num2);
+//     }
+// }
+// public class practiceDemo {
+//     public static void main(String[] args) {
+//         First f = new First();
+
+//         f.display();
+//         f.display(10);
+//         f.display(15,25);
+//     }
+// }
+
+
+// Constructor overloading     (pg 37)
+class Box{
+    double height, width, length;
+
+    Box(double h, double l, double w){
+        width = w;
+        height = h;
+        length = l;
     }
-    void display(int num){
-        System.out.println("Square = " + num*num);
+    Box(){
+        width = height = length = 11;
     }
-    void display(int num1, int num2){
-        System.out.println("Multiplication = " + num1 * num2);
+    Box(double side){
+        width = height = length = side;
     }
 }
 public class practiceDemo {
     public static void main(String[] args) {
-        First f = new First();
+        Box b;
+        
+        b = new Box();
+        System.out.println(b.height);
 
-        f.display();
-        f.display(10);
-        f.display(15,25);
+        b = new Box(10,20,30);
+        System.out.println(b.width);
+
+        b = new Box(10);
+        System.out.println(b.length);
     }
 }
