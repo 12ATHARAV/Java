@@ -429,3 +429,23 @@
 
 
 //  Method overloading (pg 35)
+class First{
+    void display(){
+        System.out.println("this is display");
+    }
+    void display(int num){
+        System.out.println("Square = " + num*num);
+    }
+    void display(int num1, int num2){
+        System.out.println("Multiplication = " + num1 * num2);
+    }
+}
+public class practiceDemo {
+    public static void main(String[] args) {
+        First f = new First();
+
+        f.display();
+        f.display(10);
+        f.display(15,25);
+    }
+}
