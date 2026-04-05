@@ -452,32 +452,72 @@
 
 
 // Constructor overloading     (pg 37)
-class Box{
-    double height, width, length;
+// class Box{
+//     double height, width, length;
 
-    Box(double h, double l, double w){
-        width = w;
-        height = h;
-        length = l;
+//     Box(double h, double l, double w){
+//         width = w;
+//         height = h;
+//         length = l;
+//     }
+//     Box(){
+//         width = height = length = 11;
+//     }
+//     Box(double side){
+//         width = height = length = side;
+//     }
+// }
+// public class practiceDemo {
+//     public static void main(String[] args) {
+//         Box b;
+        
+//         b = new Box();
+//         System.out.println(b.height);
+
+//         b = new Box(10,20,30);
+//         System.out.println(b.width);
+
+//         b = new Box(10);
+//         System.out.println(b.length);
+//     }
+// }
+
+
+// Static - Keyword         (pg - 39)
+
+class First{
+    static int a = 100;
+
+    static void meth(){
+        System.out.println("This is static method.");
     }
-    Box(){
-        width = height = length = 11;
-    }
-    Box(double side){
-        width = height = length = side;
+
+    static{
+        System.out.println("This is static block.");
     }
 }
 public class practiceDemo {
+    static{
+        System.out.println("this is static block in practiceDemo class.");
+    }
+
     public static void main(String[] args) {
-        Box b;
-        
-        b = new Box();
-        System.out.println(b.height);
+        System.out.println("Hello");
+        System.out.println(First.a);     //static variable is accessed
+        First.meth();        //static method accessed
 
-        b = new Box(10,20,30);
-        System.out.println(b.width);
+        First f1 = new First();
+        First f2 = new First();
 
-        b = new Box(10);
-        System.out.println(b.length);
+        System.out.println(f1.a);
+        System.out.println(f2.a);
+
+        f1.a = 200;
+        System.out.println(f2.a);
+        System.out.println(First.a);
+
+        f1.meth();
+        f2.meth();
+
     }
 }
