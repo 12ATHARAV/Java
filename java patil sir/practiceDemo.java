@@ -524,12 +524,48 @@
 
 
 // final - keyword      (pg - 42)
-class First{
-    final int i = 100;
-}
-public class practiceDemo {
-    public static void main(String[] args) {
-        First f = new First();
-        System.out.println(f.i);
-    }
-}
+// class First{
+//     final int i = 100;
+// }
+// public class practiceDemo {
+//     public static void main(String[] args) {
+//         First f = new First();
+//         System.out.println(f.i);
+
+//         // f.i = 200;        gives compile time error
+//         // System.out.println(f.i);
+//     }
+// }
+
+
+
+// Nested classes
+// class Outer{
+//     int a = 100;
+//     Inner obj = new Inner();
+
+//     void access(){
+//         Inner i = new Inner();
+//         i.showa();
+//     }
+//     class Inner{
+//         void showa(){
+//             System.out.println("a = " + a);
+//         }
+//     }
+// }
+// public class practiceDemo {
+//     public static void main(String[] args) {
+//         Outer o = new Outer();
+//         o.access();
+
+//         o.obj.showa();
+
+//         Outer.Inner oi = new Outer().new Inner();
+//         oi.showa();
+//     }
+// }
+
+
+
+// Inheritance          (pg - 45)
