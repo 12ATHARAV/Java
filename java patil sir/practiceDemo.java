@@ -485,39 +485,51 @@
 
 // Static - Keyword         (pg - 39)
 
+// class First{
+//     static int a = 100;
+
+//     static void meth(){
+//         System.out.println("This is static method.");
+//     }
+
+//     static{
+//         System.out.println("This is static block.");
+//     }
+// }
+// public class practiceDemo {
+//     static{
+//         System.out.println("this is static block in practiceDemo class.");
+//     }
+
+//     public static void main(String[] args) {
+//         System.out.println("Hello");
+//         System.out.println(First.a);     //static variable is accessed
+//         First.meth();        //static method accessed
+
+//         First f1 = new First();
+//         First f2 = new First();
+
+//         System.out.println(f1.a);
+//         System.out.println(f2.a);
+
+//         f1.a = 200;
+//         System.out.println(f2.a);
+//         System.out.println(First.a);
+
+//         f1.meth();
+//         f2.meth();
+
+//     }
+// }
+
+
+// final - keyword      (pg - 42)
 class First{
-    static int a = 100;
-
-    static void meth(){
-        System.out.println("This is static method.");
-    }
-
-    static{
-        System.out.println("This is static block.");
-    }
+    final int i = 100;
 }
 public class practiceDemo {
-    static{
-        System.out.println("this is static block in practiceDemo class.");
-    }
-
     public static void main(String[] args) {
-        System.out.println("Hello");
-        System.out.println(First.a);     //static variable is accessed
-        First.meth();        //static method accessed
-
-        First f1 = new First();
-        First f2 = new First();
-
-        System.out.println(f1.a);
-        System.out.println(f2.a);
-
-        f1.a = 200;
-        System.out.println(f2.a);
-        System.out.println(First.a);
-
-        f1.meth();
-        f2.meth();
-
+        First f = new First();
+        System.out.println(f.i);
     }
 }
