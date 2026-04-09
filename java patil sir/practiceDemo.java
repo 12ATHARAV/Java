@@ -622,3 +622,36 @@
 
 
 // super keyword      (pg - 49)
+// 1. to call the constructor of super class.
+class Box{
+    double width, height, length;
+
+    Box(double w, double h, double l){
+        width = w;
+        height = h;
+        length = l;
+    }
+
+    void volume(){
+        System.out.println("Volume = " + width * height * length);
+    }
+}
+class Mybox extends Box{
+    double density;
+
+    Mybox(double w, double h, double l, double d){
+        super(w, h, l);
+        density = d;
+    }
+
+    void mass(){
+        System.out.println("Mass = " + width * height * length * density);
+    }
+}
+class practiceDemo{
+    public static void main(String[] args) {
+        Mybox m = new Mybox(10, 10, 10, 5);
+        m.volume();
+        m.mass();
+    }
+}
