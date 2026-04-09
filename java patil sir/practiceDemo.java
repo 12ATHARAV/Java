@@ -569,3 +569,56 @@
 
 
 // Inheritance          (pg - 45)
+// simple inheritance        (pg - 46)
+// class First{
+//     int a;
+//     void showa(){
+//         System.out.println("a = " + a);
+//     }
+// }
+// class Second extends First{
+//     int b;
+//     void showab(){
+//         System.out.println("a = " + a + " b = " + b);
+//     }
+// }
+// public class practiceDemo {
+//     public static void main(String[] args) {
+//         Second s = new Second();
+
+//         s.a = 100;
+//         s.b = 200;
+//         s.showab();
+//         s.showa();
+//     }
+// }
+
+
+
+// Member access in inheritance
+// class First{
+//     int a;
+//     void showa(){
+//         System.out.println("a = " + a);
+//     }
+// }
+// class Second extends First{
+//     int b;
+//     void showab(){
+//         System.out.println("a = " + a + " b = " + b);
+//     }
+// }
+// public class practiceDemo {
+//     public static void main(String[] args) {
+//         First f = new Second();
+//         f.a = 100;
+//         f.showa();
+
+//         // f.b = 100;
+//         // f.showab();
+//     }
+// }
+
+
+
+// super keyword      (pg - 49)
