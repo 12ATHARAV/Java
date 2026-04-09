@@ -678,35 +678,58 @@
 
 
 // Multilevel hierarchy of inheritance   (pg - 52)
-class First{
-    int a;
+// class First{
+//     int a;
 
-    void showa(){
-        System.out.println("a = " + a);
+//     void showa(){
+//         System.out.println("a = " + a);
+//     }
+// }
+// class Second extends First{
+//     int b;
+
+//     void showab(){
+//         System.out.println("a = " + a + " b = " + b);
+//     }
+// }
+// class Third extends Second{
+//     int c;
+
+//     void showabc(){
+//         System.out.println("a = " + a + " b = " + b + " c = " + c);
+//     }
+// }
+// public class practiceDemo {
+//     public static void main(String[] args) {
+//         Third t = new Third();
+//         t.a = 100;
+//         t.b = 200;
+//         t.c = 300;
+//         t.showa();
+//         t.showab();
+//         t.showabc();
+//     }
+// }
+
+
+// How the constructors are called in multi-level hierarchy   (pg  54)
+class First{
+    First(){
+        System.out.println("Constructor of First class");
     }
 }
 class Second extends First{
-    int b;
-
-    void showab(){
-        System.out.println("a = " + a + " b = " + b);
+    Second(){
+        System.out.println("Constructor of Second class");
     }
 }
 class Third extends Second{
-    int c;
-
-    void showabc(){
-        System.out.println("a = " + a + " b = " + b + " c = " + c);
+    Third(){
+        System.out.println("Constructor of third class");
     }
 }
 public class practiceDemo {
     public static void main(String[] args) {
-        Third t = new Third();
-        t.a = 100;
-        t.b = 200;
-        t.c = 300;
-        t.showa();
-        t.showab();
-        t.showabc();
+        new Third();
     }
 }
