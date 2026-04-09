@@ -713,23 +713,51 @@
 
 
 // How the constructors are called in multi-level hierarchy   (pg  54)
+// class First{
+//     First(){
+//         System.out.println("Constructor of First class");
+//     }
+// }
+// class Second extends First{
+//     Second(){
+//         System.out.println("Constructor of Second class");
+//     }
+//     void meth(){
+//         System.out.println("say Hello !!");
+//     }
+// }
+// class Third extends Second{
+//     Third(){
+//         System.out.println("Constructor of third class");
+//     }
+// }
+// public class practiceDemo {
+//     public static void main(String[] args) {
+//         new Third();
+//         new Second().meth();
+//     }
+// }
+
+
+
+// Method Overriding      (pg - 56)
 class First{
-    First(){
-        System.out.println("Constructor of First class");
+    void meth(){
+        System.out.println("Meth defined in 1st class");
     }
 }
 class Second extends First{
-    Second(){
-        System.out.println("Constructor of Second class");
+    void meth(){
+        System.out.println("Meth defined in 2nd Class");
     }
-}
-class Third extends Second{
-    Third(){
-        System.out.println("Constructor of third class");
+    void access(){
+        super.meth();
     }
 }
 public class practiceDemo {
     public static void main(String[] args) {
-        new Third();
+        Second s = new Second();
+        s.meth();
+        s.access();
     }
 }
