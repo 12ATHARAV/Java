@@ -658,20 +658,55 @@
 
 
 // 2. to refer member inherited from super class
-class First{
-    int a = 100;
-}
-class Second extends First{
-    int a = 200;
+// class First{
+//     int a = 100;
+// }
+// class Second extends First{
+//     int a = 200;
 
-    void access(){
-        System.out.println(super.a);
+//     void access(){
+//         System.out.println(super.a);
+//     }
+// }
+// class practiceDemo{
+//     public static void main(String[] args) {
+//         Second s = new Second();
+//         System.out.println(s.a);
+//         s.access();
+//     }
+// }
+
+
+// Multilevel hierarchy of inheritance   (pg - 52)
+class First{
+    int a;
+
+    void showa(){
+        System.out.println("a = " + a);
     }
 }
-class practiceDemo{
+class Second extends First{
+    int b;
+
+    void showab(){
+        System.out.println("a = " + a + " b = " + b);
+    }
+}
+class Third extends Second{
+    int c;
+
+    void showabc(){
+        System.out.println("a = " + a + " b = " + b + " c = " + c);
+    }
+}
+public class practiceDemo {
     public static void main(String[] args) {
-        Second s = new Second();
-        System.out.println(s.a);
-        s.access();
+        Third t = new Third();
+        t.a = 100;
+        t.b = 200;
+        t.c = 300;
+        t.showa();
+        t.showab();
+        t.showabc();
     }
 }
