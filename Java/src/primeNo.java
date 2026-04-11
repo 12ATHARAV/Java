@@ -973,51 +973,112 @@
 // }
 
 
-interface MyInter {
-    void meth();
-}
+// interface MyInter {
+//     void meth();
+// }
 
-class Class1 implements MyInter {
-    public void meth() {
-        System.out.println("meth defined in Class1");
-    }
-}
+// class Class1 implements MyInter {
+//     public void meth() {
+//         System.out.println("meth defined in Class1");
+//     }
+// }
 
-class Class2 implements MyInter {
-    public void meth() {
-        System.out.println("meth defined in Class2");
-    }
-}
+// class Class2 implements MyInter {
+//     public void meth() {
+//         System.out.println("meth defined in Class2");
+//     }
+// }
 
-class MyClass {
-    MyInter getObject(int choice) {
-        if (choice == 1) {
-            return new Class1();   
-        } else {
-            return new Class2();   
-        }
-    }
+// class MyClass {
+//     MyInter getObject(int choice) {
+//         if (choice == 1) {
+//             return new Class1();   
+//         } else {
+//             return new Class2();   
+//         }
+//     }
 
-    void myMeth(MyInter m) {
-        m.meth();
-    }
-}
+//     void myMeth(MyInter m) {
+//         m.meth();
+//     }
+// }
 
-class Demo {
-    public static void main(String args[]) {
+// class Demo {
+//     public static void main(String args[]) {
 
-        MyClass mc = new MyClass();
+//         MyClass mc = new MyClass();
 
-        MyInter obj1 = mc.getObject(1);   
-        MyInter obj2 = mc.getObject(2);   
+//         MyInter obj1 = mc.getObject(1);   
+//         MyInter obj2 = mc.getObject(2);   
 
-        obj1.meth();   
-        obj2.meth();   
-    }
-}
+//         obj1.meth();   
+//         obj2.meth();   
+//     }
+// }
 // ```
 
 // **Output:**
 // ```
 // meth defined in Class1
 // meth defined in Class2
+
+
+
+
+// 
+class MyThread implements Runnable
+{
+  Thread t;
+ 
+  MyThread(String tname)
+   {
+     t=new Thread(this, tname);
+     t.start();
+   }
+  public void run()
+   {
+      for(int i=1; i<=4; i++)
+       {
+         System.out.println(t.getName() + " : " + i);
+ 
+         try
+           {
+             Thread.sleep(1000);
+           }
+         catch(InterruptedException ie)
+           { } 
+       }
+   }
+}
+ 
+class Demo
+{
+  public static void main(String args[ ]) 
+   {
+     MyThread m1=new MyThread("One");
+     MyThread m2=new MyThread("Two");
+     MyThread m3=new MyThread("Three");
+ 
+     try
+      {
+       Thread.sleep(30); 
+      }catch(InterruptedException ie){}
+ 
+      System.out.println(m1.t.isAlive());
+      System.out.println(m2.t.isAlive());
+      System.out.println(m3.t.isAlive());
+ 
+      try
+       {
+         m1.t.join();
+         m2.t.join();
+         m3.t.join();
+       }
+     catch(InterruptedException ie)
+       { }    
+ 
+      System.out.println(m1.t.isAlive());
+      System.out.println(m2.t.isAlive());
+      System.out.println(m3.t.isAlive());
+   }
+}

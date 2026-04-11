@@ -741,23 +741,25 @@
 
 
 // Method Overriding      (pg - 56)
-class First{
-    void meth(){
-        System.out.println("Meth defined in 1st class");
-    }
-}
-class Second extends First{
-    void meth(){
-        System.out.println("Meth defined in 2nd Class");
-    }
-    void access(){
-        super.meth();
-    }
-}
-public class practiceDemo {
-    public static void main(String[] args) {
-        Second s = new Second();
-        s.meth();
-        s.access();
-    }
-}
+// class First{
+//     void meth(){
+//         System.out.println("Meth defined in 1st class");
+//     }
+// }
+// class Second extends First{
+//     void meth(){
+//         System.out.println("Meth defined in 2nd Class");
+//     }
+//     void access(){
+//         super.meth();
+//     }
+// }
+// public class practiceDemo {
+//     public static void main(String[] args) {
+//         Second s = new Second();
+//         s.meth();
+//         s.access();
+//     }
+// }
+
+
