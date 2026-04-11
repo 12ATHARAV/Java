@@ -763,3 +763,87 @@
 // }
 
 
+
+// D.M.D  (Dynamic Method Dispatch)          (pg - 58)
+// Runtime polymorphism of java
+
+// class First{
+//   void meth(){
+//     System.out.println("This is 1st method");
+//   }
+// }
+// class Second extends First{
+//   void meth(){
+//     System.out.println("This is 2nd method");
+//   }
+// }
+// class Third extends First{
+//   void meth(){
+//     System.out.println("This is 3rd method");
+//   }
+// }
+// class Fourth extends First{
+//   void meth(){
+//     System.out.println("This is 4th method");
+//   }
+// }
+// class Myclass{
+//   void mymeth(First f){
+//     f.meth();
+//   }
+// }
+// class practiceDemo{
+//   public static void main(String[] args) {
+//     First f = new First();
+//     Second s = new Second();
+//     Third t = new Third();
+//     Fourth ff = new Fourth();
+
+//     Myclass P = new Myclass();
+//     P.mymeth(f);
+//     P.mymeth(s);
+//     P.mymeth(t);
+//     P.mymeth(ff);
+//   }
+// }
+
+
+
+// (Pg - 63)
+class Figure{
+  double dim1, dim2;
+  Figure(double d1, double d2){
+    dim1 = d1;
+    dim2 = d2;
+  }
+  Figure(double d1){
+    dim1 = d1;
+  }
+  void area(){
+    System.out.println("This is area in figure class");
+  }
+}
+class Rectangle extends Figure{
+  Rectangle(double width, double length){
+    super(width, length);
+  }
+  void area(){
+    System.out.println("Area of rectangle = " + dim1*dim2);
+  }
+}
+class Triangle extends Figure{
+  Triangle(double base, double height){
+    super(base, height);
+  }
+  void area(){
+    System.out.println("Area of triangle = " + 0.5*dim1*dim2);
+  }
+}
+class Circle extends Figure{
+  Circle(double radius){
+    super(radius);
+  }
+  void area(){
+    System.out.println();
+  }
+}
