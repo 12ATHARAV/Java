@@ -44,8 +44,20 @@ Methods of 'String' class:
 
 
 
+// VECTOR
 
 import java.util.*;
+
+class First{
+  void display(){
+    System.out.println("This is display");
+  }
+
+  public String toString()
+   {
+     return "First: description of First class";
+   }  
+}
 
 public class Demo {
   public static void main(String[] args) {
@@ -60,8 +72,19 @@ public class Demo {
     System.out.println(v.capacity());  // capacity will inc. + 2 = 5 (as capacityIncrement is 2)
     System.out.println(v.size());
     System.out.println(v);
+
     for(int i = 0; i < v.size(); i++)
       System.out.println((String)v.get(i));
+
+    v.add(1, "Five");
+    System.out.println(v);
+
+    v.remove(1);
+    System.out.println(v);
+
+    First f = new First();
+    v.add(f);
+    System.out.println(v);
   }
 }
 
@@ -72,4 +95,5 @@ Methos of Vector class
 3) add(): boolean add(Object obj)
 4) get(): Object get(int index)
 5) add(): boolean add(int index, Object obj)
+6) remove(): void remove(int index)
 */
