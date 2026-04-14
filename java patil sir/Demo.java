@@ -1,30 +1,30 @@
 
 // STRING
 
-public class Demo {
-  public static void main(String[] args) {
-    String str1 = "CPC";
-    String str2 = "CPC";
-    String str3 = "DPC";
-    String str4 = "Hello";
-    String str5 = "India is my country. India is superpower";
+// public class Demo {
+//   public static void main(String[] args) {
+//     String str1 = "CPC";
+//     String str2 = "CPC";
+//     String str3 = "DPC";
+//     String str4 = "Hello";
+//     String str5 = "India is my country. India is superpower";
 
-    System.out.println(str1.length());
-    System.out.println(str1.charAt(1));
-    System.out.println(str1.equals(str2));
-    System.out.println(str1.equals(str3));
-    System.out.println(str1.compareTo(str3));
-    System.out.println(str1.compareTo(str4));
-    System.out.println(str4.toUpperCase());
-    System.out.println(str4.toLowerCase());
-    System.out.println(str4.replace('l', 'M'));
-    System.out.println(str4);
-    System.out.println(str4.substring(1,4));
-    System.out.println(str5.replaceAll("India", "Bharat"));
-    System.out.println(str5.indexOf("is"));
-    System.out.println(str5.indexOf("is", 7));
-  }
-}
+//     System.out.println(str1.length());
+//     System.out.println(str1.charAt(1));
+//     System.out.println(str1.equals(str2));
+//     System.out.println(str1.equals(str3));
+//     System.out.println(str1.compareTo(str3));
+//     System.out.println(str1.compareTo(str4));
+//     System.out.println(str4.toUpperCase());
+//     System.out.println(str4.toLowerCase());
+//     System.out.println(str4.replace('l', 'M'));
+//     System.out.println(str4);
+//     System.out.println(str4.substring(1,4));
+//     System.out.println(str5.replaceAll("India", "Bharat"));
+//     System.out.println(str5.indexOf("is"));
+//     System.out.println(str5.indexOf("is", 7));
+//   }
+// }
 
 /*
 Methods of 'String' class:
@@ -40,3 +40,8 @@ Methods of 'String' class:
 10) indexOf(): int indexOf(String searchString)
 11) indexOf(): int indexOf(int startIndex, String searchString)
 */
+
+
+
+
+
