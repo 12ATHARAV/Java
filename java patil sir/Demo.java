@@ -1,219 +1,42 @@
-// class MyThread implements Runnable
-// {
-//   Thread t;
-//   int start, end;
 
-//   MyThread(String tname, int start, int end)
-//    {
-//      this.start = start;
-//      this.end = end;
-//      t = new Thread(this, tname);
-//      t.start();
-//    }
-
-//   public void run()
-//    {
-//       for(int i = start; i <= end; i++)
-//        {
-//          System.out.println(t.getName() + " : " + i);
-
-//          try
-//            {
-//              Thread.sleep(1000);
-//            }
-//          catch(InterruptedException ie)
-//            { } 
-//        }
-//    }
-// }
-
-// class Demo
-// {
-//   public static void main(String args[]) 
-//    {
-//       try
-//        {
-//          MyThread m1 = new MyThread("One", 1, 10);
-//          m1.t.join();
-
-//          MyThread m2 = new MyThread("Two", 11, 20);
-//          m2.t.join();
-//        }
-//       catch(InterruptedException ie)
-//        { }    
-//    }
-// }
-
-
-
-// Deadlock among 3 threads
- 
-class MyThread1 implements Runnable
-
-{
-
-  Thread t;
-
-  Thread obj;
- 
-  MyThread1(String tname)
-
-   {
-
-     t=new Thread(this, tname);
-
-     t.start();
-
-   }
-
-  public void run()
-
-   {
-
-      for(int i=1; i<=10; i++)
-
-       {
-
-         System.out.println(t.getName() + " : " + i);
- 
-         try
-
-           {
-
-             if(i==5) obj.join();
- 
-             Thread.sleep(1000);
-
-           }
-
-         catch(InterruptedException ie)
-
-           { } 
-
-       }
-
-   }
-
-}
- 
-class MyThread2 implements Runnable
-
-{
-
-  Thread t;
-
-  Thread obj;
- 
-  MyThread2(String tname, Thread obj)
-
-   {
-
-     this.obj=obj;
- 
-     t=new Thread(this, tname);
-
-     t.start();
-
-   }
-
-  public void run()
-
-   {
- 
-      for(int i=11; i<=20; i++)
-
-       {
-
-         System.out.println(t.getName() + " : " + i);
- 
-         try
-
-           {
-
-             if(i==15) obj.join();
- 
-             Thread.sleep(1000);
-
-           }
-
-         catch(InterruptedException ie)
-
-           { } 
-
-       }
-
-   }
-
-}
- 
-class MyThread3 implements Runnable
-
-{
-
-  Thread t;
-
-  Thread obj;
- 
-  MyThread3(String tname, Thread obj)
-
-   {
-
-     this.obj=obj;
- 
-     t=new Thread(this, tname);
-
-     t.start();
-
-   }
-
-  public void run()
-
-   {
- 
-      for(int i=21; i<=30; i++)
-
-       {
-
-         System.out.println(t.getName() + " : " + i);
- 
-         try
-
-           {
-
-             if(i==25) obj.join();
- 
-             Thread.sleep(1000);
-
-           }
-
-         catch(InterruptedException ie)
-
-           { } 
-
-       }
-
-   }
-
-}
- 
-class Demo
-
-{
-
-  public static void main(String args[ ]) 
-
-   {
-
-     MyThread1 m1=new MyThread1("One");
-
-     MyThread2 m2=new MyThread2("Two", m1.t);
-
-     MyThread3 m3=new MyThread3("Three", m2.t);
-
-     m1.obj=m3.t;
-
-   }
-
+// STRING
+
+public class Demo {
+  public static void main(String[] args) {
+    String str1 = "CPC";
+    String str2 = "CPC";
+    String str3 = "DPC";
+    String str4 = "Hello";
+    String str5 = "India is my country. India is superpower";
+
+    System.out.println(str1.length());
+    System.out.println(str1.charAt(1));
+    System.out.println(str1.equals(str2));
+    System.out.println(str1.equals(str3));
+    System.out.println(str1.compareTo(str3));
+    System.out.println(str1.compareTo(str4));
+    System.out.println(str4.toUpperCase());
+    System.out.println(str4.toLowerCase());
+    System.out.println(str4.replace('l', 'M'));
+    System.out.println(str4);
+    System.out.println(str4.substring(1,4));
+    System.out.println(str5.replaceAll("India", "Bharat"));
+    System.out.println(str5.indexOf("is"));
+    System.out.println(str5.indexOf("is", 7));
+  }
 }
 
- 
+/*
+Methods of 'String' class:
+1) length(): int length()
+2) charAt(): char charAt(int index)
+3) equals(): public boolean equals(Object obj)
+4) compareTo(): public int compareTo(String str) 
+5) toUpperCase(): String toUpperCase()
+6) toLowerCase(): String toLowerCase()
+7) replace(): void replace(char oldChar, char newChar)
+8) substring(): String substring(int startIndex, int endIndex + 1)
+9) replaceAll(): void replaceAll(String oldString, String newString)
+10) indexOf(): int indexOf(String searchString)
+11) indexOf(): int indexOf(int startIndex, String searchString)
+*/
