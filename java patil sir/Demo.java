@@ -45,3 +45,31 @@ Methods of 'String' class:
 
 
 
+import java.util.*;
+
+public class Demo {
+  public static void main(String[] args) {
+    Vector v = new Vector(3, 2);
+
+    System.out.println(v.capacity());
+    System.out.println(v.size());
+    v.add("One");
+    v.add("Two");
+    v.add("Three");
+    v.add("Four");
+    System.out.println(v.capacity());  // capacity will inc. + 2 = 5 (as capacityIncrement is 2)
+    System.out.println(v.size());
+    System.out.println(v);
+    for(int i = 0; i < v.size(); i++)
+      System.out.println((String)v.get(i));
+  }
+}
+
+/*
+Methos of Vector class
+1) capacity: final int capacity()
+2) size(): final int size()
+3) add(): boolean add(Object obj)
+4) get(): Object get(int index)
+5) add(): boolean add(int index, Object obj)
+*/
